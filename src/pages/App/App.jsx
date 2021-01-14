@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -32,7 +32,10 @@ class App extends Component {
           path="/"
           render={() => (
             <main>
-              <h1>Welcome. This is an authorization template.</h1>
+              <h1>Welcome to Munch!</h1>
+              <Link to={{ pathname: "/search" }}>Search Recipes</Link><br/>
+              <Link to={{ pathname: "/cookbook" }}>Cookbook</Link><br/>
+              <div className='mike'><p>Michael's color</p></div>
             </main>
           )}
         />

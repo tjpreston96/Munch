@@ -1,3 +1,16 @@
+body{
+  background-color: #E6AA68;
+  
+}
 main {
   text-align: center;
+  
+}
+nav{
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+}
+.mike{
+  background-color: #92140C;
 }
