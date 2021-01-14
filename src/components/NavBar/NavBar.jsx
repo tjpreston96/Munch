@@ -10,6 +10,9 @@ const NavBar = ({ user, handleLogout }) => {
             <ul id="nav-mobile" className="right">
               <li className="nav-link">Welcome, {user.name}</li>
               <li><Link to="/users" className="nav-link">Users</Link></li>
+              <li><Link to={{ pathname: "/search" }}>SEARCH</Link></li>
+              <li>
+              <Link to={{ pathname: "/profile" }}>PROFILE</Link><br/></li>
               <Link to='' className='nav-link' onClick={handleLogout}>LOG OUT</Link>
             </ul>
           </div>
