@@ -10,7 +10,23 @@ nav{
   background-color: cornsilk;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid rgb(46, 49, 50);
+  margin-bottom: 2rem;
 }
 .mike{
   background-color: #92140C;
 }
+.userCard{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* margin-top: 2rem; */
+  background-color: cornsilk;
+  text-align: center;
+  border: 1px solid rgb(46, 49, 50);
+  border-radius: 1.5rem;
+  width: 80%;
+}
+/* .mike2{
+  background-color: #
+} */

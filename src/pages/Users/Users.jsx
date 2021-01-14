@@ -14,10 +14,13 @@ class Users extends Component {
   render() {
     return (
       <>
+        <div className='userCard'>
         <h1>Hello. This is a list of all the users.</h1>
         {this.state.users.map((user) => (
-          <p>{user.name} </p>
+            <p>{user.name} </p>
+
         ))}
+          </div>
       </>
     );
   }
