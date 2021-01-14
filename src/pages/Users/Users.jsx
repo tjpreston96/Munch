@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getAllUsers } from "../../services/userService";
+import { Link } from "react-router-dom";
 
 class Users extends Component {
   state = {
@@ -14,13 +15,14 @@ class Users extends Component {
   render() {
     return (
       <>
-        <div className='userCard'>
-        <h1>User List:</h1>
-        {this.state.users.map((user) => (
-            <p>{user.name} </p>
+        <div className="userCard">
+          <h1>Hello. This is a list of all the users.</h1>
+          {this.state.users.map((user) => (
 
-        ))}
-          </div>
+            <p>{user.name} </p>
+          ))}
+        </div>
+        <Link to={{ pathname: "/" }}>Return to Home</Link>
       </>
     );
   }
