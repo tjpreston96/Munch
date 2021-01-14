@@ -20,9 +20,9 @@ nav{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-bottom: 1rem;
   background-color: cornsilk;
   text-align: center;
-
   border-radius: 1.5rem;
   width: 80%;
   padding: 10px;

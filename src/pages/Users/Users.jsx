@@ -15,14 +15,15 @@ class Users extends Component {
   render() {
     return (
       <>
-        <div className="userCard">
-          <h1>User List:</h1>
-          {this.state.users.map((user) => (
-
-            <p>{user.name} </p>
-          ))}
-        </div>
-        <Link to={{ pathname: "/" }}>Return to Home</Link>
+        <main>
+          <div className="userCard">
+            <h1>User List:</h1>
+            {this.state.users.map((user) => (
+              <p>{user.name} </p>
+            ))}
+          </div>
+          <Link to={{ pathname: "/" }}>Return to Home</Link>
+        </main>
       </>
     );
   }
