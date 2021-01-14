@@ -4,8 +4,9 @@ import NavBar from "../../components/NavBar/NavBar";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
 import authService from "../../services/authService";
-import Users from '../Users/Users'
+import Users from "../Users/Users";
 import "./App.css";
+import Search from '../Search/Search'
 
 class App extends Component {
   state = {
@@ -23,22 +24,29 @@ class App extends Component {
   };
 
   render() {
-    const { user } = this.state
+    const { user } = this.state;
     return (
       <>
-        <NavBar user={this.state.user} handleLogout={this.handleLogout}/>
+        <NavBar user={this.state.user} handleLogout={this.handleLogout} />
         <Route
           exact
           path="/"
           render={() => (
             <main>
               <h1>Welcome to Munch!</h1>
-              <Link to={{ pathname: "/search" }}>Search Recipes</Link><br/>
-              <Link to={{ pathname: "/cookbook" }}>Cookbook</Link><br/>
-              <div className='mike'><p>Michael's color</p></div>
+              <Link to={{ pathname: "/search" }}>Search Recipes</Link>
+              <br />
+              <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
+              <br />
+              <div className="mike">
+                <p>Michael's color</p>
+              </div>
             </main>
           )}
         />
+        <Route exact path="/search"
+        render={()=>
+        <Search/>} />
         <Route
           exact
           path="/signup"
@@ -62,9 +70,7 @@ class App extends Component {
         <Route
           exact
           path="/users"
-          render={() =>
-            user ? <Users /> : <Redirect to="/login" />
-          }
+          render={() => (user ? <Users /> : <Redirect to="/login" />)}
         />
       </>
     );
