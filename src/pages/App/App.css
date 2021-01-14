@@ -1,10 +1,10 @@
 body{
   background-color: #E6AA68;
-  
+
 }
 main {
   text-align: center;
-  
+
 }
 nav{
   background-color: cornsilk;
@@ -20,12 +20,13 @@ nav{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  /* margin-top: 2rem; */
   background-color: cornsilk;
   text-align: center;
-  border: 1px solid rgb(46, 49, 50);
+
   border-radius: 1.5rem;
   width: 80%;
+  padding: 10px;
+  box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
 /* .mike2{
   background-color: #

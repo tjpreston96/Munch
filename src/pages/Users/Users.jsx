@@ -18,6 +18,7 @@ class Users extends Component {
         <div className="userCard">
           <h1>Hello. This is a list of all the users.</h1>
           {this.state.users.map((user) => (
+
             <p>{user.name} </p>
           ))}
         </div>
