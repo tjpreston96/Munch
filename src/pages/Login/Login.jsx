@@ -29,11 +29,11 @@ class LoginPage extends Component {
   };
 
   updateMessage = (msg) => {
-    this.setState({message: msg});
-  }
+    this.setState({ message: msg });
+  };
 
   render() {
-    const {email, pw} = this.state
+    const { email, pw } = this.state;
     return (
       <main className="Login">
         <h3>Log In</h3>

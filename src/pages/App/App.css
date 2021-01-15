@@ -1,22 +1,20 @@
-body{
-  background-color: #E6AA68;
-
+body {
+  background-color: #e6aa68;
 }
 main {
   text-align: center;
-
 }
-nav{
+nav {
   background-color: cornsilk;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgb(46, 49, 50);
   margin-bottom: 2rem;
 }
-.mike{
-  background-color: #92140C;
+.mike {
+  background-color: #92140c;
 }
-.userCard{
+.userCard {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
