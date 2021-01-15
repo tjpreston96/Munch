@@ -6,7 +6,8 @@ import Login from "../Login/Login";
 import authService from "../../services/authService";
 import Users from "../Users/Users";
 import "./App.css";
-import Search from '../Search/Search'
+import Search from "../Search/Search";
+import Profile from "../Profile/Profile";
 
 class App extends Component {
   state = {
@@ -44,9 +45,9 @@ class App extends Component {
             </main>
           )}
         />
-        <Route exact path="/search"
-        render={()=>
-        <Search/>} />
+        <Route exact path="/search" render={() => <Search />} />
+        <Route exact path="/profile" render={() => <Profile />} />
+
         <Route
           exact
           path="/signup"
