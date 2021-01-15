@@ -10,3 +10,14 @@
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
+
+.cookbook{
+  background-color: darkgray;
+  margin: 0 auto;
+  width: 50%;
+}
+.profile{
+  background-color: blue;
+  margin: 0 auto;
+  width: 50%;
+}

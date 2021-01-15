@@ -7,7 +7,8 @@ class Profile extends Component {
     return (
       <>
         <div className="profileCard">
-          <div></div>
+          <div className="profile">Profile Div</div>
+          <div className="cookbook">Cookbook Div</div>
         </div>
       </>
     );
