@@ -9,7 +9,6 @@ import "./App.css";
 import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
-import Cookbook from "../Cookbook/Cookbook";
 
 class App extends Component {
   state = {
@@ -50,7 +49,6 @@ class App extends Component {
         <Route exact path="/search" render={() => <Search />} />
         <Route exact path="/profile" render={() => <Profile />} />
         <Route exact path="/board" render={() => <Board />} />
-        <Route exact path="/cookbook" render={() => <Cookbook />} />
 
         <Route
           exact
