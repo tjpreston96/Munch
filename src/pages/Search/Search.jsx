@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Search.css";
-import * as recipeAPI from "../../services/recipe-api";
+import { getResultsFromBackend }from "../../services/recipe-api";
 
 class Search extends Component {
   state = {
@@ -26,9 +26,9 @@ class Search extends Component {
   };
 
   handleSearch = async (formData) => {
-    const recipes = await recipeAPI.getResultsFromBackend(formData);
+    const recipes = await getResultsFromBackend(formData);
     // console.log(recipes.hits);
-    this.setState({ recipes: recipes.hits });
+    this.setState({ recipes, formData });
   };
 
   render() {
