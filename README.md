@@ -24,7 +24,7 @@ Coming soon...
 
 Coming soon...
 
-## Descripiton:
+## Description:
 
 Are you always questioning yourself, “What should I cook today?”  Well if you are,
 You’ve come to the right place!
