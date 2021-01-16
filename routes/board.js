@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const boardCtrl = require("../../contollers/board");
+const boardCtrl = require("../controllers/board");
 
 // public routes
 
