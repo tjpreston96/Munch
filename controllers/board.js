@@ -1,4 +1,4 @@
-const Recipe = require('../../models/board');
+const Recipe = require('../models/board');
 
 
 module.exports = {
