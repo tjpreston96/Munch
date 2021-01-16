@@ -46,10 +46,27 @@ class App extends Component {
             </main>
           )}
         />
-        <Route exact path="/search" render={() => <Search />} />
-        <Route exact path="/profile" render={() => <Profile />} />
-        <Route exact path="/board" render={() => <Board />} />
-
+        <Route
+          exact
+          path="/search"
+          render={() =>
+            user ? <Search user={this.state.user} /> : <Redirect to="/login" />
+          }
+        />
+        <Route
+          exact
+          path="/profile"
+          render={() =>
+            user ? <Profile user={this.state.user} /> : <Redirect to="/login" />
+          }
+        />
+        <Route
+          exact
+          path="/board"
+          render={() =>
+            user ? <Board user={this.state.user} /> : <Redirect to="/login" />
+          }
+        />
         <Route
           exact
           path="/signup"
