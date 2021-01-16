@@ -26,7 +26,9 @@ class Search extends Component {
   };
 
   handleSearch = async (formData) => {
-    const recipes = await recipeAPI.recipeSearch(formData)
+    const recipes = await recipeAPI.recipeSearch(formData);
+    console.log();
+    this.setState({ recipes: recipes.recipes });
   };
 
   render() {
