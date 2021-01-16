@@ -27,7 +27,7 @@ class Search extends Component {
 
   handleSearch = async (formData) => {
     const recipes = await recipeAPI.getResultsFromBackend(formData);
-    console.log(recipes.hits);
+    // console.log(recipes.hits);
     this.setState({ recipes: recipes.hits });
   };
 
