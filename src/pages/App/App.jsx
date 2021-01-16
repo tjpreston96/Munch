@@ -46,8 +46,8 @@ class App extends Component {
         <Route
           exact
           path="/search"
-          render={() =>
-            user ? <Search user={this.state.user} /> : <Redirect to="/login" />
+          render={({history}) =>
+            user ? <Search history={history} user={this.state.user} /> : <Redirect to="/login" />
           }
         />
         <Route
