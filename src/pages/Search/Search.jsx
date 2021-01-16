@@ -28,7 +28,7 @@ class Search extends Component {
   handleSearch = async (formData) => {
     const recipes = await recipeAPI.recipeSearch(formData);
     console.log();
-    this.setState({ recipes: recipes.recipes });
+    this.setState({ recipes: recipes.hits });
   };
 
   render() {
@@ -37,15 +37,18 @@ class Search extends Component {
         <div className="searchCard">
           <h2>Find a Recipe</h2>
           <div>
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <input
+                className="searchBar"
                 type="text"
                 name="query"
+                placeholder="What would you like to eat?"
                 value={this.state.formData.query}
                 onChange={this.handleChange}
               />
               <button type="submit">Search</button>
             </form>
+            <div className="results"></div>
           </div>
         </div>
       </>
