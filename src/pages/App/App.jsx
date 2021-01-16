@@ -40,9 +40,6 @@ class App extends Component {
               <br />
               <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
               <br />
-              <div className="mike">
-                <p>Michael's color</p>
-              </div>
             </main>
           )}
         />
