@@ -1,25 +1,23 @@
 const APP_ID = process.env.APP_ID;
 const APP_KEY = process.env.APP_KEY;
 const BASE_URL = "api.edamam.com";
-const Recipe = require('../models/recipe')
 // const Recipe = require("../models/recipe");
 const axios = require("axios");
 
 module.exports = {
-    search,
-  //     index,
-  // new: newRecipe,
+  search,
 };
 
 function search(req, res) {
-  let query = req.body.data;
+  let query = req.body.query;
   axios
     .get(
       `https://${BASE_URL}/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
     )
-    .then((response) => {
-      res.json(response.data);
-    });
+    .then((recipes) => {
+      console.log(recipes.data.hits)
+      res.json(recipes.data.hits);
+    })
 }
 
 // function newRecipe(req, res) {
