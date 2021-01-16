@@ -18,11 +18,7 @@ function search(req, res) {
       `https://${BASE_URL}/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
     )
     .then((response) => {
-      res.json(response)
-      console.log(response)
-    })
-    .catch((error) => {
-      console.log(error);
+      res.json(response.data);
     });
 }
 // function newRecipe(req, res) {
