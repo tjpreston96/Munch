@@ -33,21 +33,29 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => (
-            <main>
-              <h1>Welcome to Munch!</h1>
-              <Link to={{ pathname: "/search" }}>Search Recipes</Link>
-              <br />
-              <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
-              <br />
-            </main>
-          )}
+          render={() =>
+            user ? (
+              <main>
+                <h1>Welcome to Munch!</h1>
+                <Link to={{ pathname: "/search" }}>Search Recipes</Link>
+                <br />
+                <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
+                <br />
+              </main>
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           exact
           path="/search"
-          render={({history}) =>
-            user ? <Search history={history} user={this.state.user} /> : <Redirect to="/login" />
+          render={({ history }) =>
+            user ? (
+              <Search history={history} user={this.state.user} />
+            ) : (
+              <Redirect to="/login" />
+            )
           }
         />
         <Route

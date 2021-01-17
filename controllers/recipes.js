@@ -12,7 +12,7 @@ function search(req, res) {
   let query = req.body.query;
   axios
     .get(
-      `https://${BASE_URL}/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
+      `https://${BASE_URL}/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=21`
     )
     .then((recipes) => {
       console.log(recipes.data.hits)
