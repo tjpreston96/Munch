@@ -9,10 +9,11 @@ module.exports = {
 }
 
 function index(req, res) {
-    Recipe.find({}).then((recipes) => {
-      res.json(recipes);
+    Recipe.find({})
+    .then((recipes) => {
+    res.json(recipes);
     });
-  }
+    }
 
 function create(req, res){
 

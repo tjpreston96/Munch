@@ -14,9 +14,14 @@ function search(req, res) {
     .get(
       `https://${BASE_URL}/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
     )
+    .then((recipes) => {
+      console.log(recipes.data.hits)
+      res.json(recipes.data.hits);
+    })
     .then(recipes => {
       res.json();
     });
+
 }
 // console.log(recipes.data.hits[0]);
 // console.log(`========================`);

@@ -8,7 +8,7 @@ export function getResultsFromBackend(formData) {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        Authorization: "Bearer " + tokenService.getToken(),
+        "Authorization": "Bearer " + tokenService.getToken(),
       },
       body: JSON.stringify(formData),
     },
