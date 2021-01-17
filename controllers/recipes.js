@@ -18,7 +18,18 @@ function search(req, res) {
       console.log(recipes.data.hits)
       res.json(recipes.data.hits);
     })
+    .then(recipes => {
+      res.json();
+    });
+
 }
+// console.log(recipes.data.hits[0]);
+// console.log(`========================`);
+
+// const search = recipes.data.hits;
+// // res.json(recipes.data.hits);
+// res.json(search);
+// console.log(search);
 
 // function newRecipe(req, res) {
 //     res.render("")

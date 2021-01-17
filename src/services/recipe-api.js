@@ -14,9 +14,9 @@ export function getResultsFromBackend(formData) {
     },
     { mode: "cors" }
   )
-    .then((res) => {
-      console.log(res);
-      res.json(res);
+    .then((banana) => {
+      console.log(banana);
+      banana.json();
     })
 
     .catch((err) => {
