@@ -27,7 +27,7 @@ class Search extends Component {
 
   handleSearch = async (formData) => {
     const recipes = await getResultsFromBackend(formData);
-    // console.log(recipes.hits);
+    this.props.history.push('/search')
     this.setState({ recipes, formData });
   };
 
