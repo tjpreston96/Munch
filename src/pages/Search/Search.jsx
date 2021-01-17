@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
+// import { Link } from "react-router-dom";
 
 class Search extends Component {
   state = {
@@ -26,10 +27,10 @@ class Search extends Component {
   };
 
   handleSearch = async (formData) => {
-    console.log(`this function works!!!`)
+    console.log(`this function works!!!`);
     const recipes = await getResultsFromBackend(formData);
 
-    this.props.history.push('/search')
+    this.props.history.push("/search");
     this.setState({ recipes, formData });
     console.log(recipes);
     console.log(`==========================`);
@@ -54,7 +55,26 @@ class Search extends Component {
               />
               <button type="submit">Search</button>
             </form>
-            <div className="results"></div>
+            <div className="results">
+              {this.state.recipes.map((recipes) => (
+                <button>
+                  <div className="resultsCard">
+                    <div className="imgDiv">
+                      <img
+                        className="resultImg"
+                        src={recipes.recipe.image}
+                        alt="food-img"
+                      />
+                    </div>
+                    {recipes.recipe.label}
+                    <p>
+                      Source:
+                      {recipes.recipe.source}
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </>
