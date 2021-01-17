@@ -8,15 +8,15 @@ export function getResultsFromBackend(formData) {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "Authorization": "Bearer " + tokenService.getToken(),
+        Authorization: "Bearer " + tokenService.getToken(),
       },
       body: JSON.stringify(formData),
     },
     { mode: "cors" }
   )
-    .then((res) => {
-      console.log(res);
-      res.json(res);
+    .then((banana) => {
+      console.log(banana);
+      banana.json();
     })
 
     .catch((err) => {
