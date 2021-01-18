@@ -6,8 +6,9 @@ class Profile extends Component {
   render() {
     return (
       <>
-        <div>
-          <div></div>
+        <div className="profileCard">
+          <div className="profile">Profile Div</div>
+          <div className="cookbook">Cookbook Div</div>
         </div>
       </>
     );

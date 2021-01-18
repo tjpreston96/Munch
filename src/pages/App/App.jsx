@@ -9,6 +9,7 @@ import "./App.css";
 import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
+import RecipeDetails from '../RecipeDetails/RecipeDetails';
 
 class App extends Component {
   state = {
@@ -33,23 +34,45 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => (
-            <main>
-              <h1>Welcome to Munch!</h1>
-              <Link to={{ pathname: "/search" }}>Search Recipes</Link>
-              <br />
-              <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
-              <br />
-              <div className="mike">
-                <p>Michael's color</p>
-              </div>
-            </main>
-          )}
+          render={() =>
+            user ? (
+              <main>
+                <h1>Welcome to Munch!</h1>
+                <Link to={{ pathname: "/search" }}>Search Recipes</Link>
+                <br />
+                <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
+                <br />
+              </main>
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
-        <Route exact path="/search" render={() => <Search />} />
-        <Route exact path="/profile" render={() => <Profile />} />
-        <Route exact path="/board" render={() => <Board />} />
-
+        <Route
+          exact
+          path="/search"
+          render={({ history }) =>
+            user ? (
+              <Search history={history} user={this.state.user} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/profile"
+          render={() =>
+            user ? <Profile user={this.state.user} /> : <Redirect to="/login" />
+          }
+        />
+        <Route
+          exact
+          path="/board"
+          render={() =>
+            user ? <Board user={this.state.user} /> : <Redirect to="/login" />
+          }
+        />
         <Route
           exact
           path="/signup"
