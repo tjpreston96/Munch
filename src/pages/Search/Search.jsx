@@ -58,7 +58,10 @@ class Search extends Component {
             </form>
             <div className="results">
               {this.state.recipes.map((recipes) => (
-                <Link>
+                <Link className="recipe-details"
+                to={{
+                  pathname:'/recipes-details'
+                  }}>
                   <div className="resultsCard">
                     <div className="imgDiv">
                       <img
