@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import './Board.css'
+import React, { Component } from "react";
+import "./Board.css";
 
 class Board extends Component {
-  state = {  }
-  render() { 
-    return ( <></> );
+  state = {};
+  render() {
+    return <></>;
   }
 }
- 
+
 export default Board;
