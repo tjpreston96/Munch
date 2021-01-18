@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 class Search extends Component {
@@ -41,7 +42,7 @@ class Search extends Component {
   render() {
     return (
       <>
-        <div className="searchCard">
+        <div className="searchPage">
           <h2>Find a Recipe</h2>
           <div>
             <form onSubmit={this.handleSubmit}>
@@ -57,7 +58,7 @@ class Search extends Component {
             </form>
             <div className="results">
               {this.state.recipes.map((recipes) => (
-                <button>
+                <Link>
                   <div className="resultsCard">
                     <div className="imgDiv">
                       <img
@@ -66,13 +67,11 @@ class Search extends Component {
                         alt="food-img"
                       />
                     </div>
-                    {recipes.recipe.label}
-                    <p>
-                      Source:
-                      {recipes.recipe.source}
-                    </p>
+                    <div className='resultInfo'>
+                      <h2>{recipes.recipe.label}</h2>
+                    </div>
                   </div>
-                </button>
+                </Link>
               ))}
             </div>
           </div>
