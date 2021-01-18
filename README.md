@@ -52,6 +52,7 @@ First sign up for our app. Second you can find any recipe you desire in the sear
 - Express.js
 - React.js
 - Node.js
+- Postman
 - Heroku Deployment
 - Edamam Recipe Search API
 
@@ -64,9 +65,18 @@ First sign up for our app. Second you can find any recipe you desire in the sear
 - [ ] Reviews
 - [ ] Contact us page
 
+## Our Team:
+- Julio Rojas: Front-End Lead, Documenter, Designer | <a href="https://github.com/juliors1"> GitHub</a> | <a href="https://www.linkedin.com/in/juliors1/">LinkedIn</a>
 
+- Tyler Preston: Front-End, Git Manager, Lead Designer | <a href="https://github.com/tjpreston96">GitHub</a> |<a href="https://www.linkedin.com/in/tylerjpreston/"> LinkedIn</a>
+
+- Juan Gonzalez: Back-End Lead, API Manager, Database Manager | <a href="https://github.com/Gonzalez32">GitHub</a> | <a href="https://www.linkedin.com/in/juan-gonzalez93/">LinkedIn</a>
+
+- Michael Banks: Back-End, API, Database  <a href="https://github.com/Mbanks1">GitHub</a> | <a href="https://www.linkedin.com/in/michael1banks/">LinkedIn</a>
 ## Attributions:
+
 
 #### While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
 
 - <a href="https://developer.edamam.com/edamam-recipe-api">Edamam Recipe Search API</a> - The API I used is called the Edamam  Recipe Search API.
+- Big shoutout to Cory Spicer for helping us with our API. | <a href="https://www.linkedin.com/in/cory-spicer/">LinkedIn</a>
