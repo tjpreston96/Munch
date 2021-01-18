@@ -1,4 +1,4 @@
-.searchCard {
+.searchPage {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -10,20 +10,32 @@
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
-.results{
+.results {
   width: 80%;
   margin: 1rem auto;
 }
-.resultsCard{
+a {
+  text-decoration: none;
+  color: black;
+}
+.resultsCard {
   background-color: white;
   margin-bottom: 10px;
   border: 1px solid rgb(46, 49, 50);
   display: flex;
+  text-decoration: none;
 }
-.imgDiv{
-width: 25%;
+.imgDiv {
+  width: 25%;
+  margin: 1rem;
+  /* border: 1px solid rgb(46, 49, 50); */
 }
-.resultImg{
+.resultImg {
   width: 100%;
-  margin: auto
+  margin: auto;
+  border: 1px solid rgb(46, 49, 50);
 }
+/* input.searchBar {
+  width: 40%;
+  height: 1.5rem;
+} */
