@@ -12,10 +12,9 @@ class RecipeDetails extends Component {
 
   render() {
     return (
-<>
+  <>
 
-
-</>
+  </>
 );
 }
 
