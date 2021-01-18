@@ -9,7 +9,7 @@ import "./App.css";
 import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
-import RecipeDetails from '../RecipeDetails/RecipeDetails';
+import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
 class App extends Component {
   state = {
@@ -82,6 +82,11 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
+        />
+        <Route
+          exact
+          path="/recipesDetails"
+          render={() => (user ? <RecipeDetails /> : <Redirect to="/login" />)}
         />
         <Route
           exact
