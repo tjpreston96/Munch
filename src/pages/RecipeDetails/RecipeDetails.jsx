@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./RecipeDetails.css";
 
 class RecipeDetails extends Component {
   state = {
@@ -11,7 +12,13 @@ class RecipeDetails extends Component {
   // }
 
   render() {
-    return <><p>hello</p></>;
+    return (
+      <>
+        <div className="detailsPage">
+          <h2>Recipe Details</h2>
+        </div>
+      </>
+    );
   }
 }
 
