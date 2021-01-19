@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import RecipeCard from "../../components/RecipeCard/RecipeCard"
 
 class Search extends Component {
   state = {
     recipes: [],
+    singleRecipe: [],
     formData: {
       query: "",
     },
@@ -58,10 +59,14 @@ class Search extends Component {
             </form>
             <div className="results">
               {this.state.recipes.map((recipes) => (
-                <Link className="recipe-details"
-                to={{
-                  pathname:'/recipes-details'
-                  }}>
+                <Link
+                  
+                  className="recipesDetails"
+                  to={{
+                    pathname: `/recipesDetails`,
+                    state: {recipes}
+                  }}
+                >
                   <div className="resultsCard">
                     <div className="imgDiv">
                       <img
@@ -70,12 +75,13 @@ class Search extends Component {
                         alt="food-img"
                       />
                     </div>
-                    <div className='resultInfo'>
+                    <div className="resultInfo">
                       <h2>{recipes.recipe.label}</h2>
                     </div>
                   </div>
                 </Link>
               ))}
+              <RecipeCard singleRecipe={this.state.singleRecipe}/>
             </div>
           </div>
         </div>

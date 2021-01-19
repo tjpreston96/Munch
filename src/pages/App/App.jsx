@@ -13,6 +13,7 @@ import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
 class App extends Component {
   state = {
+    singleRecipe: [],
     user: authService.getUser(),
   };
 
@@ -53,7 +54,11 @@ class App extends Component {
           path="/search"
           render={({ history }) =>
             user ? (
-              <Search history={history} user={this.state.user} />
+              <Search
+                history={history}
+                singleRecipe={this.state.singleRecipe}
+                user={this.state.user}
+              />
             ) : (
               <Redirect to="/login" />
             )
@@ -86,7 +91,7 @@ class App extends Component {
         <Route
           exact
           path="/recipesDetails"
-          render={() => (user ? <RecipeDetails /> : <Redirect to="/login" />)}
+          render={({location}) => (user ? <RecipeDetails location={location} user={this.state.user}/> : <Redirect to="/login" />)}
         />
         <Route
           exact
