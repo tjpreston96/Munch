@@ -1,23 +1,18 @@
-// import React, { Component } from 'react';
+import React, { Component } from "react";
 
-// class RecipeDetails extends Component {
-//   state = {
-//   recipeDetails: {}
-//   }
+class RecipeDetails extends Component {
+  state = {
+    recipeDetails: [],
+  };
 
-//   async componentDidMount() {
-//     const recipeDetails = await getRecipeDetails(this.props.match.recipe.label)
-//     this.setState({ recipeDetails })
-//   }
+  // async componentDidMount() {
+  //   const recipeDetails = await getRecipeDetails(this.props.match.recipe.label);
+  //   this.setState({ recipeDetails });
+  // }
 
-//   render() {
-//     return (
-// <>
+  render() {
+    return <><p>hello</p></>;
+  }
+}
 
-
-// </>
-// );
-// }
-
-
-// export default RecipeDetails;
+export default RecipeDetails;
