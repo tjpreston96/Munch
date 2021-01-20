@@ -25,20 +25,25 @@ a {
   display: flex;
   text-decoration: none;
 }
+
 .imgDiv {
-  width: 25%;
-  margin: 1rem;
-  /* border: 1px solid rgb(46, 49, 50); */
+  border: 1px solid rgb(46, 49, 50);
 }
+
 .resultImg {
   width: 100%;
   margin: auto;
   border: 1px solid rgb(46, 49, 50);
 }
+
 .searchBar {
   padding: 10px;
   font-size: 15px;
   border: 1px solid grey;
+
+
+/* input.searchBar {
+
   width: 40%;
   background: #f1f1f1;
 }
