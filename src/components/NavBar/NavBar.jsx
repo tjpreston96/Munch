@@ -44,7 +44,7 @@ const NavBar = ({ user, handleLogout }) => {
 
               <li className="nav-item">
                 <Link to="/profile" className="nav-link">
-                  Profile
+                  Profile: 
                 </Link>
               </li>
 
@@ -57,9 +57,9 @@ const NavBar = ({ user, handleLogout }) => {
           </div>
         </nav>
       ) : (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <Link to="/" className="navbar-brand">
-            Welcome
+            Munch
           </Link>
           <button
             className="navbar-toggler"
@@ -72,7 +72,7 @@ const NavBar = ({ user, handleLogout }) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li>
                 <Link to="/login" className="nav-link">

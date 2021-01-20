@@ -1,13 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  background-color:#b1d3c8;
-}
-main {
-  text-align: center;
-}
-.userCard {
+.boardPage {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
