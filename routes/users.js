@@ -11,8 +11,8 @@ router.get("/", checkAuth, usersCtrl.index);
 router.get("/profile", checkAuth, usersCtrl.showUserProfile);
 router.get("/profile/:id", checkAuth, usersCtrl.showOtherUsers);
 router.put("/profile", checkAuth, usersCtrl.update);
-// router.get("/addrecipe", checkAuth, usersCtrl.addRecipeToCookbook);
-// router.put("/deleterecipe", checkAuth, usersCtrl.deleteRecipeFromCookbook);
+router.get("/addrecipe", checkAuth, usersCtrl.addRecipeToCookbook);
+router.put("/deleterecipe", checkAuth, usersCtrl.deleteRecipeFromCookbook);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
