@@ -51,11 +51,11 @@ class Search extends Component {
                 className="searchBar"
                 type="text"
                 name="query"
-                placeholder="What would you like to eat?"
+                placeholder="Search..."
                 value={this.state.formData.query}
                 onChange={this.handleChange}
               />
-              <button type="submit">Search</button>
+              <button type="submit"><i className="fa fa-search search-btn"></i></button>
             </form>
             <div className="results">
               {this.state.recipes.map((recipes) => (

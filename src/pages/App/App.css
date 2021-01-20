@@ -1,18 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #e6aa68;
 }
 main {
   text-align: center;
-}
-nav {
-  background-color: cornsilk;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid rgb(46, 49, 50);
-  margin-bottom: 2rem;
-}
-.nav-wrapper{
-  box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
 .userCard {
   display: flex;
@@ -26,6 +19,3 @@ nav {
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
-/* .mike2{
-  background-color: #
-} */

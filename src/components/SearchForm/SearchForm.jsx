@@ -3,12 +3,12 @@ import React from "react";
 const SearchForm = () => {
   return (
     <>
-      <div className="searchCard">
+      {/* <div className="searchCard">
         <h2>Find a Recipe</h2>
         <div>
           <form onSubmit={this.handleSubmit}>
             <input
-              className="searchBar"
+              className="searchBar "
               type="text"
               name="query"
               placeholder="What would you like to eat?"
@@ -19,7 +19,7 @@ const SearchForm = () => {
           </form>
           <div className="results"></div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

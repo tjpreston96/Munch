@@ -46,7 +46,6 @@ First sign up for our app. Second you can find any recipe you desire in the sear
 - HTML
 - CSS
 - Javascript
-- Bootstrap 4.5
 - MongoDB
 - Mongoose
 - Express.js
