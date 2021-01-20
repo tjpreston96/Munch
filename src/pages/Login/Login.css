@@ -6,7 +6,7 @@
   margin-bottom: 50px;
 }
 
-.loginPage{
+.loginCard{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -20,4 +20,8 @@
   /* text-align: center;
   justify-content: center;
   align-items: center; */
+}
+
+.password{
+  margin-bottom: 10px;
 }
