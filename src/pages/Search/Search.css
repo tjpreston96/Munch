@@ -36,7 +36,21 @@ a {
   border: 1px solid rgb(46, 49, 50);
 }
 
+.searchBar {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid grey;
+
+
 /* input.searchBar {
+
   width: 40%;
-  height: 1.5rem;
-} */
+  background: #f1f1f1;
+}
+
+.search-btn {
+  padding: 11px;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}

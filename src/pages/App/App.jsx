@@ -11,6 +11,7 @@ import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
 import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
+
 class App extends Component {
   state = {
     singleRecipe: [],
