@@ -57,6 +57,7 @@ class Search extends Component {
               />
               <button type="submit"><i className="fa fa-search search-btn"></i></button>
             </form>
+            <hr/>
             <div className="results">
               {this.state.recipes.map((recipes) => (
                 <Link
