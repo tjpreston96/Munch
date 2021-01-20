@@ -66,16 +66,23 @@ class Search extends Component {
                     state: { recipes },
                   }}
                 >
-                  <div className="resultsCard">
-                    <div className="imgDiv">
-                      <img
-                        className="resultImg"
-                        src={recipes.recipe.image}
-                        alt="food-img"
-                      />
-                    </div>
-                    <div className="resultInfo">
-                      <h2>{recipes.recipe.label}</h2>
+                  <div className="resultsCard card mb-3">
+                    <div className="row no-gutters">
+                      <div className="col-md-4">
+                        <img
+                          src={recipes.recipe.image}
+                          className="card-img"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title">{recipes.recipe.label}</h5>
+                          <p className="card-text">
+                            Rating: <br/> Recipe.rating
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>
