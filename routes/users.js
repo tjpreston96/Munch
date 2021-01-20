@@ -8,9 +8,11 @@ const usersCtrl = require('../controllers/users');
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
 router.get("/", checkAuth, usersCtrl.index);
-router.get("/profile", checkAuth, usersCtrl.showUserProfile)
-router.get("/profile/:id", checkAuth, usersCtrl.showOtherUsers)
-router.put("/profile", checkAuth, usersCtrl.update)
+router.get("/profile", checkAuth, usersCtrl.showUserProfile);
+router.get("/profile/:id", checkAuth, usersCtrl.showOtherUsers);
+router.put("/profile", checkAuth, usersCtrl.update);
+// router.get("/addrecipe", checkAuth, usersCtrl.addRecipeToCookbook);
+// router.put("/deleterecipe", checkAuth, usersCtrl.deleteRecipeFromCookbook);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
