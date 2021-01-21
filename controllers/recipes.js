@@ -18,14 +18,13 @@ function search(req, res) {
     .then((recipes) => {
       // console.log(recipes.data.hits)
       res.json(recipes.data.hits);
-    })
+    });
 }
 
 function recipeDetails(req, res) {
-  Recipe.findById(req.params.id)
+  Recipe.findById(req.params.id);
   console.log(req.params.id);
 }
-
 
 // console.log(recipes.data.hits[0]);
 // console.log(`========================`);

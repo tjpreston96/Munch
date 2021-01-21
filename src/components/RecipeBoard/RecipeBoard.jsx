@@ -1,6 +1,6 @@
 import React from "react";
 
-const recipeBoard = () => {
+const RecipeBoard = () => {
   return (
     <div className="container-sm">
       <h1 className="h1">Recipe Board</h1>
@@ -13,7 +13,17 @@ const recipeBoard = () => {
           <input
             className="form-control"
             type="text"
-            placeholder="Enter Post..."
+            placeholder="Enter Name..."
+          />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter Ingredients..."
+          />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Enter Directions..."
           />
           <button type="button" className="btn btn-outline-primary">
             Create Post
@@ -24,4 +34,4 @@ const recipeBoard = () => {
   );
 };
 
-export default recipeBoard;
+export default RecipeBoard;
