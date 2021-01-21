@@ -61,9 +61,10 @@ class Search extends Component {
             </form>
             <hr />
             <div className="results">
-              {this.state.recipes.map((recipes) => (
+              {this.state.recipes.map((recipes,idx) => (
                 <Link
                   className="recipesDetails"
+                  key={idx}
                   to={{
                     pathname: `/recipesDetails`,
                     state: { recipes },
