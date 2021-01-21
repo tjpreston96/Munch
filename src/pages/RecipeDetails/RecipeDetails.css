@@ -9,4 +9,26 @@
   width: 80%;
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
+  justify-content: center;
+  align-items: center;
+}
+.detailBackground{
+  background-color: white;
+  padding: 1rem;
+  border: lightgray 1px solid;
+  border-radius: 1%;
+  width: 80%;
+}
+.detailImg{
+  width: 50%;
+  margin: 1rem;
+  border: lightgray 1px solid;
+  border-radius: 2%;
+}
+p{
+  font-size: medium;
+  /* text-align: left; */
+}
+.split{
+  width: 65%;
 }

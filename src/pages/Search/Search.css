@@ -11,8 +11,12 @@
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
 .results {
-  width: 80%;
+  width: 90%;
   margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 a {
   text-decoration: none;
@@ -49,11 +53,9 @@ a {
   font-size: 17px;
   cursor: pointer;
 }
- .card-img-top{
-   /* height: 180px;
-   width: 286px; */
- }
+
  .card{
    margin: 1rem;
    max-width: 18rem;
+   
  }

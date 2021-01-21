@@ -6,7 +6,10 @@ const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ? (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{color: "white"}}>
+        <nav
+          className="navbar navbar-expand-lg navbar-dark bg-dark"
+          style={{ color: "white" }}
+        >
           <Link to="/" className="navbar-brand">
             Munch
           </Link>
@@ -44,7 +47,7 @@ const NavBar = ({ user, handleLogout }) => {
 
               <li className="nav-item">
                 <Link to="/profile" className="nav-link">
-                  Profile: {user.name}
+                  Profile
                 </Link>
               </li>
               <li className="nav-item ">

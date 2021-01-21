@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
 import { Link } from "react-router-dom";
-import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
 class Search extends Component {
   state = {
@@ -61,9 +60,10 @@ class Search extends Component {
             </form>
             <hr />
             <div className="results">
-              {this.state.recipes.map((recipes) => (
+              {this.state.recipes.map((recipes, idx) => (
                 <Link
                   className="recipesDetails"
+                  key={idx}
                   to={{
                     pathname: `/recipesDetails`,
                     state: { recipes },
@@ -78,13 +78,12 @@ class Search extends Component {
                     <div className="card-body">
                       <h5 className="card-title">{recipes.recipe.label}</h5>
                       <p className="card-text">
-                        Rating: <br/> {this.props.user.cookbook }
+                        Rating: <br /> {this.props.user.cookbook}
                       </p>
                     </div>
                   </div>
                 </Link>
               ))}
-              <RecipeCard singleRecipe={this.state.singleRecipe} />
             </div>
           </div>
         </div>
