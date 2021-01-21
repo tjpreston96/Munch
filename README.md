@@ -1,7 +1,7 @@
 # Munch
 
 ## Getting Started:
-( Deployed link ) Coming soon..
+<a href="https://munch-bunch.herokuapp.com/"> - This will prompt you to the deployed web app where you can start finding your favorite recipes!
 
 <a href="https://trello.com/b/3Z1qAtou/munch-app">Trello</a> - This link will direct you to my planning in moving foward with my web app.
 
@@ -46,12 +46,13 @@ First sign up for our app. Second you can find any recipe you desire in the sear
 - HTML
 - CSS
 - Javascript
-- MongoDB
+- Bootstrap 4.5
 - Mongoose
 - Express.js
 - React.js
 - Node.js
 - Postman
+- Axios
 - Heroku Deployment
 - Edamam Recipe Search API
 
