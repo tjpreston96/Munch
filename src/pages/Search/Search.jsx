@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
 import { Link } from "react-router-dom";
-import RecipeCard from "../../components/RecipeCard/RecipeCard";
+// import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
 class Search extends Component {
   state = {
@@ -85,7 +85,7 @@ class Search extends Component {
                   </div>
                 </Link>
               ))}
-              <RecipeCard singleRecipe={this.state.singleRecipe} />
+              
             </div>
           </div>
         </div>
