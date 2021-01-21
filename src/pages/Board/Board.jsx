@@ -9,7 +9,9 @@ class Board extends Component {
   render() {
     return (
       <>
-        <RecipeBoard />
+        <div className="boardPage">
+          <RecipeBoard />
+        </div>
       </>
     );
   }

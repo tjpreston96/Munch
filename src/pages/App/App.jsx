@@ -11,7 +11,6 @@ import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
 import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
-
 class App extends Component {
   state = {
     singleRecipe: [],
@@ -92,7 +91,13 @@ class App extends Component {
         <Route
           exact
           path="/recipesDetails"
-          render={({location}) => (user ? <RecipeDetails location={location} user={this.state.user}/> : <Redirect to="/login" />)}
+          render={({ location }) =>
+            user ? (
+              <RecipeDetails location={location} user={this.state.user} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           exact
