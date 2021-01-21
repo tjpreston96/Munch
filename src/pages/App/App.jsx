@@ -13,6 +13,7 @@ import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
 class App extends Component {
   state = {
+    createPost: [],
     singleRecipe: [],
     user: authService.getUser(),
   };
@@ -74,8 +75,16 @@ class App extends Component {
         <Route
           exact
           path="/board"
-          render={() =>
-            user ? <Board user={this.state.user} /> : <Redirect to="/login" />
+          render={({ history }) =>
+            user ? (
+              <Board
+                history={history}
+                createPost={this.state.createPost}
+                user={this.state.user}
+              />
+            ) : (
+              <Redirect to="/login" />
+            )
           }
         />
         <Route
