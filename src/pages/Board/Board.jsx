@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Board.css";
 import * as createRecipe from "../../services/boardService";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // import RecipeBoard from "../../components/RecipeBoard/RecipeBoard";
 
@@ -53,9 +53,14 @@ class Board extends Component {
           <h1>Recipe Board</h1>
           <div className="boardPosts">
             {/* {map of board posts} */}
-            <Link to={{ pathname: '/board/add'}}>Add Recipe</Link>
+            <Link
+              className="btn btn-info"
+              style={{ backgroundColor: "rgb(46,84,101)" }}
+              to={{ pathname: "/board/add" }}
+            >
+              Add Recipe
+            </Link>
           </div>
-
         </div>
       </>
     );

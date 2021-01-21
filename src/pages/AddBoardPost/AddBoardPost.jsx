@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./AddBoardPost.css";
+import { Link } from "react-router-dom";
 
 class AddBoardPost extends Component {
   state = {
@@ -35,6 +36,7 @@ class AddBoardPost extends Component {
       <>
         <div className="addPostPage">
           <h1>Add Recipe</h1>
+
           <label htmlFor="recipe_name">Recipe Name:</label>
           <form className="" ref={this.fromRef} onSubmit={this.handleSubmit}>
             <div className="">
@@ -83,6 +85,11 @@ class AddBoardPost extends Component {
               Add Recipe
             </button>
           </form>
+          <div>
+
+          <Link className='btn btn-info' style={{ backgroundColor: "rgb(46,84,101)" }} to={{ pathname: "/board" }}>Cancel</Link>
+          </div>
+
         </div>
       </>
     );
