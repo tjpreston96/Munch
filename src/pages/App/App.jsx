@@ -91,9 +91,10 @@ class App extends Component {
         <Route
           exact
           path="/board/add"
-          render={({ history }) =>
+          render={({ history, location }) =>
             user ? (
               <AddBoardPost
+                location={location}
                 history={history}
                 createPost={this.state.createPost}
                 user={this.state.user}
