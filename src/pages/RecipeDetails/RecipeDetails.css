@@ -16,7 +16,7 @@
   background-color: white;
   padding: 1rem;
   border: lightgray 1px solid;
-  border-radius: 1%;
+  border-radius: .3rem;
   width: 80%;
 }
 .detailImg{
