@@ -49,3 +49,11 @@ a {
   font-size: 17px;
   cursor: pointer;
 }
+ .card-img-top{
+   /* height: 180px;
+   width: 286px; */
+ }
+ .card{
+   margin: 1rem;
+   max-width: 18rem;
+ }
