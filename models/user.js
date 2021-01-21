@@ -7,9 +7,17 @@ const SALT_ROUNDS = 6;
 const cookBookSchema = new Schema(
   {
     title: { type: String },
-    image: { type: String },
     ingredients: { type: String },
-    addedBy: { type: Schema.Types.ObjectId, ref: "User" },
+    recipe: { type: String },
+    label: { type: String },
+    image: { type: String },
+    source: { type: String },
+    url: { type: String },
+    yield: { type: Number },
+    healthLabels: { type: String },
+    calories: { type: Number },
+    totalTime: { type: Number },
+    totalNutrients: { type: String },
   },
   {
     timestamps: true,

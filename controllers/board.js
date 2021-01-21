@@ -13,7 +13,7 @@ module.exports = {
 
   function create(req,res){
     req.body.addedBy = req.user._id
-    req.body.ingredients = 
+    
   }
 
 
