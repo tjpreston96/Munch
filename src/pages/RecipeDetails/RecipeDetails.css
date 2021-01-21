@@ -26,5 +26,9 @@
   border-radius: 2%;
 }
 p{
-  font-size: small;
+  font-size: medium;
+  /* text-align: left; */
+}
+.split{
+  width: 65%;
 }
