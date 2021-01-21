@@ -6,7 +6,7 @@ const UserImgUpload =({
 })=>
   <label htmlFor="photo-upload" className="custom-file-upload fas">
     <div className="img-wrap img-upload" >
-      <img className='userProfile' for="photo-upload" src={src}/>
+      <img className='userProfile' alt='userPic' for="photo-upload" src={src}/>
     </div>
     <br/>
      <input className='chooseFile' id="photo-upload" type="file" onChange={onChange}/>

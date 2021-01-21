@@ -1,25 +1,19 @@
-import React from 'react';
+import React from "react";
 import "./Profile.css";
-import ProfileCard from "../../components/ProfileCard/ProfileCard"
+import ProfileCard from "../../components/ProfileCard/ProfileCard";
 
-const Profile = ({user})=>{
+const Profile = ({ user }) => {
   return (
-<>
-{/* <div className="profile-header">
-  <h1 key={user.id}
-  className="profile">{user.name}'s Saved Recipes
-  </h1>
-</div> */}
-
-<h3 className="profileCard">{user.name}'s Profile</h3>
-  <div className="profilePic">
-  <ProfileCard />
-  </div>
-
-
-  </>
-
-  )
-}
+    <>
+      <div className="profileCard">
+        <h3>{user.name}'s Profile</h3>
+        <div className="userInfo">
+          <b>Name:</b> {user.name} <br />
+          <b>Email:</b> {user.email} <br />
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Profile;

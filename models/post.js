@@ -11,7 +11,7 @@ const replySchema = new Schema(
   }
 );
 
-const boardSchema = new Schema(
+const postSchema = new Schema(
   {
     addedBy: { type: Schema.Types.ObjectId, ref: "User" },
     name: { type: String, required: true },
@@ -24,4 +24,4 @@ const boardSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Board", boardSchema);
+module.exports = mongoose.model("Post", postSchema);

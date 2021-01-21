@@ -9,10 +9,10 @@
   width: 80%;
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
+  align-items: center;
 }
 
-
-.profilePic {
-display: flex;
-justify-content: center;
+.userInfo {
+  /* background-color: white; */
+  width: 60%;
 }
