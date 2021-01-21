@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./RecipeDetails.css";
 
 // this.setState({recipeDetails: this.props.location.state.recipes.recipe})
@@ -18,7 +19,7 @@ class RecipeDetails extends Component {
           <img src={Recipes.recipe.image} className="detailImg" alt="" />
           <hr />
           <h2>{Recipes.recipe.label}</h2>
-        <h6>Total Yield: {Recipes.recipe.yield}</h6>
+          <h6>Total Yield: {Recipes.recipe.yield}</h6>
           <hr />
           <h4>Fast Facts:</h4>
           <h6>
@@ -59,6 +60,7 @@ class RecipeDetails extends Component {
               </p>
             </div>
           ))}
+          <button>Directions</button> 
         </div>
       </div>
     );

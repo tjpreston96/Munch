@@ -47,7 +47,7 @@ const NavBar = ({ user, handleLogout }) => {
 
               <li className="nav-item">
                 <Link to="/profile" className="nav-link">
-                  Profile: {user.name}
+                  Profile
                 </Link>
               </li>
               <li className="nav-item ">
