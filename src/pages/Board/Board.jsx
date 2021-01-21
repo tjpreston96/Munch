@@ -46,8 +46,8 @@ class Board extends Component {
 
   render() {
     return (
-      <>
-
+      
+<>
         <div className="mb-3">
           <div className="container-sm">
             <h1 className="h1">Recipe Board</h1>
@@ -100,9 +100,11 @@ class Board extends Component {
               </form>
             </div>
           </div>
-          
+          </div>
+          </>
     );
   }
+          
 }
 
 export default Board;
