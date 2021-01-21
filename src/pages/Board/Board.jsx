@@ -53,7 +53,7 @@ class Board extends Component {
           <h1>Recipe Board</h1>
           <div className="boardPosts">
             {/* {map of board posts} */}
-            <Link to={{ pathname: '/board/add'}}>Add Recipe</Link>
+            <Link className='btn btn-info' style={{backgroundColor:  '#b1d3c8'}} to={{ pathname: '/board/add'}}>Add Recipe</Link>
           </div>
 
         </div>
