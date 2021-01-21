@@ -69,16 +69,16 @@ class Search extends Component {
                     state: { recipes },
                   }}
                 >
+                
                   <div className="card">
-                    <img
-                      className="card-img-top"
+                    <img className="card-img-top"
                       src={`${recipes.recipe.image}`}
                       alt="Card image cap"
                     />
                     <div className="card-body">
                       <h5 className="card-title">{recipes.recipe.label}</h5>
                       <p className="card-text">
-                        Rating: <br/> {this.props.user.cookbook }
+                        Rating: <br /> {this.props.user.cookbook}
                       </p>
                     </div>
                   </div>
