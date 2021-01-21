@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
 import { Link } from "react-router-dom";
-// import RecipeCard from "../../components/RecipeCard/RecipeCard";
 
 class Search extends Component {
   state = {
@@ -61,7 +60,7 @@ class Search extends Component {
             </form>
             <hr />
             <div className="results">
-              {this.state.recipes.map((recipes,idx) => (
+              {this.state.recipes.map((recipes, idx) => (
                 <Link
                   className="recipesDetails"
                   key={idx}
@@ -70,9 +69,9 @@ class Search extends Component {
                     state: { recipes },
                   }}
                 >
-                
                   <div className="card">
-                    <img className="card-img-top"
+                    <img
+                      className="card-img-top"
                       src={`${recipes.recipe.image}`}
                       alt="Card image cap"
                     />
@@ -85,7 +84,6 @@ class Search extends Component {
                   </div>
                 </Link>
               ))}
-              
             </div>
           </div>
         </div>
