@@ -72,6 +72,7 @@ class RecipeDetails extends Component {
           <button
             className="btn btn-dark"
             style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
+            disabled
           >
             Review
           </button>
