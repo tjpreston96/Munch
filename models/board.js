@@ -25,4 +25,4 @@ const boardSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Message", boardSchema);
+module.exports = mongoose.model("Board", boardSchema);
