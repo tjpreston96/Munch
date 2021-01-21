@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const replySchema = new Schema(
   {
     addedBy: { type: Schema.Types.ObjectId, ref: "User" },
-    message: { type: String, required: true },
+    reply: { type: String, required: true },
   },
   {
     timestamps: true,

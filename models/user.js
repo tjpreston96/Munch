@@ -29,6 +29,7 @@ const userSchema = new Schema(
     name: String,
     email: { type: String, required: true, lowercase: true, unique: true },
     password: String,
+    image: String,
     cookbook: [cookBookSchema],
   },
   {
