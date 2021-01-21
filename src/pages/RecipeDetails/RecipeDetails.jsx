@@ -27,7 +27,7 @@ class RecipeDetails extends Component {
           </h6>
           {/* {Recipes.recipe.cautions} */}
           {Recipes.recipe.cautions.map((caution, idx) => (
-            <p key={idx}>{caution}</p>
+            <p className='caution' key={idx}>{caution}</p>
           ))}
           <h6>
             <b>Health Labels:</b>
@@ -60,7 +60,18 @@ class RecipeDetails extends Component {
               </p>
             </div>
           ))}
-          <button>Directions</button> 
+          <button
+            className="btn btn-dark"
+            style={{ backgroundColor: "rgb(46,84,101)" }}
+          >
+            Directions
+          </button>
+          <button
+            className="btn btn-dark"
+            style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
+          >
+            Review
+          </button>
         </div>
       </div>
     );

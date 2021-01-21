@@ -23,12 +23,15 @@
   width: 50%;
   margin: 1rem;
   border: lightgray 1px solid;
-  border-radius: 2%;
+  border-radius: .3rem;
 }
 p{
-  font-size: medium;
+  font-size: large;
   /* text-align: left; */
 }
 .split{
   width: 65%;
+}
+.caution{
+  color: red
 }

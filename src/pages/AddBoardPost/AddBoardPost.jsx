@@ -10,8 +10,13 @@ class AddBoardPost extends Component {
         <div className="addPostPage">
           <h1>Add Recipe</h1>
           <div>
-
-          <Link className='btn btn-info' style={{ backgroundColor: "rgb(46,84,101)" }} to={{ pathname: "/board" }}>Cancel</Link>
+            <Link
+              className="btn btn-info"
+              style={{ backgroundColor: "rgb(46,84,101)" }}
+              to={{ pathname: "/board" }}
+            >
+              Cancel
+            </Link>
           </div>
         </div>
       </>
