@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Board.css";
-import * as createRecipe from "../../services/boardService";
+import * as createRecipe from "../../services/postService";
 import { Link } from "react-router-dom";
 
 // import RecipeBoard from "../../components/RecipeBoard/RecipeBoard";
