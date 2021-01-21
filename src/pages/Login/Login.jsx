@@ -37,7 +37,8 @@ class LoginPage extends Component {
     return (
       <main className="Login">
         <div className="loginCard">
-          <h3>Log In</h3>
+          
+          <h3>Please Login to Continue</h3>
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label htmlFor="email"><b>Email:</b></label><br/>
             <input

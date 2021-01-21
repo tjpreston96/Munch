@@ -55,9 +55,11 @@ class Search extends Component {
                 value={this.state.formData.query}
                 onChange={this.handleChange}
               />
-              <button type="submit"><i className="fa fa-search search-btn"></i></button>
+              <button type="submit">
+                <i className="fa fa-search search-btn"></i>
+              </button>
             </form>
-            <hr/>
+            <hr />
             <div className="results">
               {this.state.recipes.map((recipes) => (
                 <Link
@@ -67,16 +69,17 @@ class Search extends Component {
                     state: { recipes },
                   }}
                 >
-                  <div className="resultsCard">
-                    <div className="imgDiv">
-                      <img
-                        className="resultImg"
-                        src={recipes.recipe.image}
-                        alt="food-img"
-                      />
-                    </div>
-                    <div className="resultInfo">
-                      <h2>{recipes.recipe.label}</h2>
+                  <div className="card">
+                    <img
+                      className="card-img-top"
+                      src={`${recipes.recipe.image}`}
+                      alt="Card image cap"
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{recipes.recipe.label}</h5>
+                      <p className="card-text">
+                        Rating: <br/> {this.props.user.cookbook }
+                      </p>
                     </div>
                   </div>
                 </Link>
