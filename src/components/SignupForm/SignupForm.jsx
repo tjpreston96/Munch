@@ -40,6 +40,10 @@ class SignupForm extends Component {
       <div>
         <h3>Sign Up</h3>
         <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <label htmlFor="name">
+            <b>Name:</b>
+          </label>
+          <br />
           <input
             type="text"
             autoComplete="off"
@@ -47,8 +51,12 @@ class SignupForm extends Component {
             value={name}
             name="name"
             onChange={this.handleChange}
-          />
-          <label htmlFor="name">Name</label>
+          />{" "}
+          <br />
+          <label htmlFor="email">
+            <b>Email:</b>
+          </label>
+          <br />
           <input
             type="text"
             autoComplete="off"
@@ -56,8 +64,10 @@ class SignupForm extends Component {
             value={email}
             name="email"
             onChange={this.handleChange}
-          />
-          <label htmlFor="email">Email</label>
+          />{" "}
+          <br />
+          <label htmlFor="password"><b>Password:</b></label>
+          <br />
           <input
             type="password"
             autoComplete="off"
@@ -65,8 +75,10 @@ class SignupForm extends Component {
             value={password}
             name="password"
             onChange={this.handleChange}
-          />
-          <label htmlFor="password">Password</label>
+          />{" "}
+          <br />
+          <label htmlFor="confirm"><b>Confirm Password:</b></label>
+          <br />
           <input
             type="password"
             autoComplete="off"
@@ -74,11 +86,11 @@ class SignupForm extends Component {
             value={passwordConf}
             name="passwordConf"
             onChange={this.handleChange}
-          />
-          <label htmlFor="confirm">Confirm Password</label>
-          <button disabled={this.isFormInvalid()}>Sign Up</button>
+          />{" "}
+          <br />
+          <button className='spacing' disabled={this.isFormInvalid()}>Sign Up</button>
           &nbsp;&nbsp;
-          <Link to="/">Cancel</Link>
+          <Link className='spacing' to="/">Cancel</Link>
         </form>
       </div>
     );
