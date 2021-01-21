@@ -3,9 +3,8 @@ const Schema = mongoose.Schema;
 
 const replySchema = new Schema(
   {
-    postedBy: String,
-    avatar: String,
-    message: String,
+    addedBy: { type: Schema.Types.ObjectId, ref: "User" },
+    message: { type: String, required: true },
   },
   {
     timestamps: true,
@@ -15,9 +14,9 @@ const replySchema = new Schema(
 const boardSchema = new Schema(
   {
     addedBy: { type: Schema.Types.ObjectId, ref: "User" },
-    name: String,
-    ingredients: String,
-    directions: String,
+    name: { type: String, required: true },
+    ingredients: { type: [String], required: true },
+    directions: { type: String, required: true },
     replies: [replySchema],
   },
   {

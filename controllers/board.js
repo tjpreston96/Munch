@@ -9,6 +9,26 @@ module.exports = {
   deleteReply,
 };
 
+
+
+  function create(req,res){
+    req.body.addedBy = req.user._id
+    req.body.ingredients = 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function deleteReply(req, res) {
   Recipe.findById(req.params.messageId)
     .then((message) => {
@@ -23,16 +43,6 @@ function index(req, res) {
   Recipe.find({})
     .then((recipes) => {
       res.json(recipes);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
-}
-
-function create(req, res) {
-  Recipe.create(req.body)
-    .then((recipe) => {
-      res.json(recipe);
     })
     .catch((err) => {
       res.json(err);
