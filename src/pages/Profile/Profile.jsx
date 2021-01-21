@@ -1,6 +1,5 @@
 import React from "react";
 import "./Profile.css";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
 
 const Profile = ({ user }) => {
   return (
