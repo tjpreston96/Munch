@@ -14,7 +14,7 @@ const replySchema = new Schema(
 
 const boardSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: "User" },
+    addedBy: { type: Schema.Types.ObjectId, ref: "User" },
     name: String,
     ingredients: String,
     directions: String,
