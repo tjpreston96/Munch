@@ -13,10 +13,10 @@ class Signup extends Component {
 
   render() {
     return (
-      <main>
+      <div className="signupCard">
         <SignupForm {...this.props} updateMessage={this.updateMessage} />
         <p>{this.state.message}</p>
-      </main>
+      </div>
     );
   }
 }
