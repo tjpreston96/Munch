@@ -10,6 +10,7 @@ import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
 import RecipeDetails from "../RecipeDetails/RecipeDetails";
+import AddBoardPost from "../AddBoardPost/AddBoardPost";
 
 class App extends Component {
   state = {
@@ -78,6 +79,21 @@ class App extends Component {
           render={({ history }) =>
             user ? (
               <Board
+                history={history}
+                createPost={this.state.createPost}
+                user={this.state.user}
+              />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/board/add"
+          render={({ history }) =>
+            user ? (
+              <AddBoardPost
                 history={history}
                 createPost={this.state.createPost}
                 user={this.state.user}

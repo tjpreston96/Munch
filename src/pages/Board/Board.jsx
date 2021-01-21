@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Board.css";
 import * as createRecipe from "../../services/boardService";
+import { Link } from 'react-router-dom'
+
 // import RecipeBoard from "../../components/RecipeBoard/RecipeBoard";
 
 class Board extends Component {
@@ -46,65 +48,18 @@ class Board extends Component {
 
   render() {
     return (
-      
-<>
-        <div className="mb-3">
-          <div className="container-sm">
-            <h1 className="h1">Recipe Board</h1>
-            <div>
-              <br />
-              <br />
-              <form onSubmit={this.handleSubmit}>
-                <label className="form-label" htmlFor="formControlInput1">
-                  Recipe Name
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Enter Name..."
-                  required
-                  name="name"
-                  value={this.state.formData.name}
-                  onChange={this.handleInputChange}
-                />
-                <br />
-                <label className="form-label" htmlFor="formControlInput1">
-                  Recipe Ingredients
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Enter Ingredients..."
-                  required
-                  name="ingredients"
-                  value={this.state.formData.ingredients}
-                  onChange={this.handleInputChange}
-                />
-                <br />
-                <label className="form-label" htmlFor="formControlInput1">
-                  Recipe Directions
-                </label>
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Enter Directions..."
-                  required
-                  name="directions"
-                  value={this.state.formData.directions}
-                  onChange={this.handleInputChange}
-                />
-                <br />
-                <button type="button" className="btn btn-outline-primary">
-                  Create Post
-                </button>
-              </form>
-            </div>
+      <>
+        <div className="boardPage">
+          <h1>Recipe Board</h1>
+          <div className="boardPosts">
+            {/* {map of board posts} */}
+            <Link to={{ pathname: '/board/add'}}>Add Recipe</Link>
           </div>
-          </div>
-          </>
+
+        </div>
+      </>
     );
   }
-          
 }
 
 export default Board;
