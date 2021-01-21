@@ -86,8 +86,13 @@ class AddBoardPost extends Component {
             </button>
           </form>
           <div>
-
-          <Link className='btn btn-info' style={{ backgroundColor: "rgb(46,84,101)" }} to={{ pathname: "/board" }}>Cancel</Link>
+            <Link
+              className="btn btn-info"
+              style={{ backgroundColor: "rgb(46,84,101)" }}
+              to={{ pathname: "/board" }}
+            >
+              Cancel
+            </Link>
           </div>
 
         </div>
