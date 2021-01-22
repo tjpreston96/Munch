@@ -56,10 +56,20 @@ class Board extends Component {
             </Link>
             {this.props.posts.map((post) => (
               <>
-                <p>
-                  <b>Name:</b> {post.name}
-                </p><br />
-                
+                <div className="posts">
+                  <p>
+                    <b>Name:</b> <br />
+                    {post.name}
+                    <br />
+                    <b>Ingredients:</b>
+                    <br />
+                    {post.ingredients}
+                    <br />
+                    <b>Directions:</b>
+                    <br />
+                    {post.directions}
+                  </p>
+                </div>
               </>
             ))}
           </div>
