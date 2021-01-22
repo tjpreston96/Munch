@@ -18,12 +18,20 @@ class Users extends Component {
         <main>
           <div className="userCard">
             <h1>User List:</h1>
-            <hr/>
+            <hr />
             {this.state.users.map((user) => (
               <p>{user.name} </p>
             ))}
+            <div>
+              <Link
+                className="btn btn-dark"
+                to={{ pathname: "/" }}
+                style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
+              >
+                Return to Home
+              </Link>
+            </div>
           </div>
-          <Link to={{ pathname: "/" }}>Return to Home</Link>
         </main>
       </>
     );
