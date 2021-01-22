@@ -7,7 +7,7 @@ module.exports = {
   update,
   addRecipeToCookbook,
   deleteRecipeFromCookbook,
-  saveCookbook
+  saveCookbook,
 };
 
 function index(req, res) {
@@ -59,8 +59,13 @@ function deleteRecipeFromCookbook(req, res) {
     });
 }
 
-function saveCookbook(req,res){
-  const cookBook = req.body
-  User.findByIdAndUpdate(req.user._id, {...(cookBook &&{$push:{cookbook:cookBook}})}, {new:true }
-    ).then((user)=>res.json(user))
+function saveCookbook(req, res) {
+  const cookBook = req.body;
+  User.findByIdAndUpdate(
+    req.user._id,
+    { ...(cookBook && { $push: { cookbook: cookBook } }) },
+    { new: true }
+  )
+    .then((user) => res.json(user))
+    .catch(console.error);
 }
