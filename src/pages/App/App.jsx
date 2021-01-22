@@ -17,6 +17,7 @@ class App extends Component {
   state = {
     user: authService.getUser(),
     posts: [],
+    
   };
 
   async componentDidMount() {
