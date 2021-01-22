@@ -53,10 +53,11 @@ class App extends Component {
             user ? (
               <main>
                 <h1>Welcome to Munch!</h1>
-                <Link to={{ pathname: "/search" }}>Search Recipes</Link>
+                <img  classname='cookie' src="https://d29fhpw069ctt2.cloudfront.net/icon/image/85060/preview.svg" width='250px' alt=""/>
+                {/* <Link to={{ pathname: "/search" }}>Search Recipes</Link>
                 <br />
                 <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
-                <br />
+                <br /> */}
               </main>
             ) : (
               <Redirect to="/login" />
