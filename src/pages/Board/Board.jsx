@@ -69,14 +69,19 @@ class Board extends Component {
                     <br />
                     {post.directions}
                   </p>
-                  
+
                   <Link
                     className=" spacing btn btn-dark"
                     style={{ backgroundColor: "rgb(46,84,101)" }}
                   >
                     Edit
                   </Link>
-                  <button className="spacing btn" style={{ backgroundColor: "#FF7F50" }}>Delete</button>
+                  <button
+                    className="spacing btn"
+                    style={{ backgroundColor: "#FF7F50" }}
+                  >
+                    Delete
+                  </button>
                 </div>
               </>
             ))}

@@ -6,7 +6,7 @@ const postCtrl = require("../controllers/posts");
 router.get("/", postCtrl.index);
 
 /*---------- Protected Routes ----------*/
-router.use(require('../config/auth'));
+router.use(require("../config/auth"));
 router.post("/", checkAuth, postCtrl.create);
 router.delete("/:id", checkAuth, postCtrl.delete);
 router.put("/:id", checkAuth, postCtrl.update);

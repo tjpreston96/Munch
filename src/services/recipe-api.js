@@ -22,7 +22,7 @@ export function getResultsFromBackend(formData) {
 }
 
 export function recipeDetails(data) {
-  console.log(data)
+  console.log(data);
   return fetch(
     "/api/recipes/details",
     {
@@ -35,8 +35,8 @@ export function recipeDetails(data) {
     },
     { mode: "cors" }
   )
-  .then((res) => res.json())
-  .catch((err) => {
-    console.log(err);
-  })
+    .then((res) => res.json())
+    .catch((err) => {
+      console.log(err);
+    });
 }

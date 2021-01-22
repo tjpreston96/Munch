@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect} from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -17,7 +17,6 @@ class App extends Component {
   state = {
     user: authService.getUser(),
     posts: [],
-
   };
 
   async componentDidMount() {
@@ -35,7 +34,7 @@ class App extends Component {
   };
 
   handleCreatePost = async (newPostData) => {
-    console.log(this.state.posts)
+    console.log(this.state.posts);
     const newPost = await postAPI.createPost(newPostData);
     this.setState({ posts: [...this.state.posts, newPost] });
     this.props.history.push("/board");
@@ -53,7 +52,12 @@ class App extends Component {
             user ? (
               <main>
                 <h1>Welcome to Munch!</h1>
-                <img  classname='cookie' src="https://d29fhpw069ctt2.cloudfront.net/icon/image/85060/preview.svg" width='250px' alt=""/>
+                <img
+                  classname="cookie"
+                  src="https://d29fhpw069ctt2.cloudfront.net/icon/image/85060/preview.svg"
+                  width="250px"
+                  alt=""
+                />
               </main>
             ) : (
               <Redirect to="/login" />

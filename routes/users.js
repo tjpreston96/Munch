@@ -12,7 +12,7 @@ router.get("/profile/:id", checkAuth, usersCtrl.showOtherUsers);
 router.put("/profile", checkAuth, usersCtrl.update);
 router.get("/addrecipe", checkAuth, usersCtrl.addRecipeToCookbook);
 router.delete("/deleterecipe", checkAuth, usersCtrl.deleteRecipeFromCookbook);
-router.post("/cookbook", checkAuth, usersCtrl.saveCookbook)
+router.post("/cookbook", checkAuth, usersCtrl.saveCookbook);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {

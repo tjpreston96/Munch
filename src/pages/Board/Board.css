@@ -10,9 +10,9 @@
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
 }
-.posts{
+.posts {
   background-color: white;
   margin: 1rem;
   border: 1px solid lightgray;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }

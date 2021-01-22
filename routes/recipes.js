@@ -4,7 +4,6 @@ const recipesCtrl = require("../controllers/recipes");
 
 /*---------- Public Routes ----------*/
 
-
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
 router.post("/search", checkAuth, recipesCtrl.search);

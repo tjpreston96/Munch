@@ -51,6 +51,7 @@ First sign up for our app. Second you can find any recipe you desire in the sear
 - Axios
 - Heroku Deployment
 - Edamam Recipe Search API
+- MongoDB Compass
 
 ## Next Steps:
 

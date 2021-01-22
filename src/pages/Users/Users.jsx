@@ -24,11 +24,11 @@ class Users extends Component {
               <div className="username">
                 <p>{user.name} </p>
                 <Link
-                    className=" spacing btn btn-dark"
-                    style={{ backgroundColor: "rgb(46,84,101)" }}
-                  >
+                  className=" spacing btn btn-dark"
+                  style={{ backgroundColor: "rgb(46,84,101)" }}
+                >
                   Add Friend
-                  </Link>
+                </Link>
               </div>
             ))}
             <div>
