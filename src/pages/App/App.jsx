@@ -17,6 +17,7 @@ class App extends Component {
   state = {
     user: authService.getUser(),
     posts: [],
+    
   };
 
   async componentDidMount() {
@@ -52,11 +53,7 @@ class App extends Component {
             user ? (
               <main>
                 <h1>Welcome to Munch!</h1>
-                
-                {/* <Link to={{ pathname: "/search" }}>Search Recipes</Link>
-                <br />
-                <Link to={{ pathname: "/cookbook" }}>Cookbook</Link>
-                <br /> */}
+                <img  classname='cookie' src="https://d29fhpw069ctt2.cloudfront.net/icon/image/85060/preview.svg" width='250px' alt=""/>
               </main>
             ) : (
               <Redirect to="/login" />

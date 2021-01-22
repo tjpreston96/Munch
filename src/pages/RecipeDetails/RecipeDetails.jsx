@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./RecipeDetails.css";
 
 // this.setState({recipeDetails: this.props.location.state.recipes.recipe})
@@ -72,9 +71,9 @@ class RecipeDetails extends Component {
           <button
             className="btn btn-dark"
             style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
-            disabled
+
           >
-            Review
+            Save Recipe
           </button>
         </div>
       </div>

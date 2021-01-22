@@ -1,17 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema(
-  {
-    reviewer: String,
-    reviewerPhoto: String,
-    rating: { type: Number, min: 1, max: 5 },
-    content: String,
-  },
-  {
-    timestamps: true,
-  }
-);
+// const reviewSchema = new Schema(
+//   {
+//     reviewer: String,
+//     reviewerPhoto: String,
+//     rating: { type: Number, min: 1, max: 5 },
+//     content: String,
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
 
 const recipeSchema = new Schema(
   {
@@ -27,7 +27,8 @@ const recipeSchema = new Schema(
     calories: { type: Number},
     totalTime: { type: Number},
     totalNutrients: { type: String},
-    reviews: [reviewSchema],
+    users:{type:Schema.Types.ObjectId, ref: 'User'},
+
   },
   {
     timestamps: true,
