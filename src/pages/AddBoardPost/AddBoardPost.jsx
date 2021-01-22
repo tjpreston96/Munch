@@ -17,7 +17,7 @@ class AddBoardPost extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // handleAddRecipe function will render in App.jsx
-    this.props.handleAddRecipe(this.state.formData);
+    this.props.handleCreatePost(this.state.formData);
   };
 
   handleChange = (e) => {
@@ -34,11 +34,13 @@ class AddBoardPost extends Component {
   render() {
     return (
       <>
+        <button onClick={this.handleShowForm}>Add Recipe</button>
         <div className="addPostPage">
           <h1>Add Recipe</h1>
 
           <label htmlFor="recipe_name">Recipe Name:</label>
           <form className="" ref={this.fromRef} onSubmit={this.handleSubmit}>
+            <input type="hidden" name="addedBy" value={this.props.user._id} />
             <div className="">
               <input
                 type="text"
@@ -94,7 +96,6 @@ class AddBoardPost extends Component {
               Cancel
             </Link>
           </div>
-
         </div>
       </>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Board.css";
-import * as createRecipe from "../../services/postService";
+import * as postAPI from "../../services/postService";
 import { Link } from "react-router-dom";
 
 // import RecipeBoard from "../../components/RecipeBoard/RecipeBoard";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 class Board extends Component {
   state = {
     invalidFrom: true,
-    createPost: [],
+    posts: [],
     formData: {
       name: "",
       directions: "",
@@ -16,11 +16,6 @@ class Board extends Component {
     },
     user: this.props.user,
   };
-
-  async componentDidMount() {
-    const recipePost = await createRecipe.createPost(this.props.user);
-    this.setState({ createPost: recipePost.recipePost });
-  }
 
   handleSubmit = (e) => {
     e.perventDefault();
@@ -38,7 +33,7 @@ class Board extends Component {
   };
 
   handleCreate = async (formData) => {
-    const recipes = await createRecipe.createPost(formData);
+    const recipes = await postAPI.createPost(formData);
     console.log(recipes);
     // this.props.history.push("/board");
     this.setState({ recipes, formData });

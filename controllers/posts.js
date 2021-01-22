@@ -8,7 +8,7 @@ module.exports = {
 };
 
 function create(req, res) {
-  req.body.addedBy = req.user._id;
+  // req.body.addedBy = req.user._id;
   Post.create(req.body)
     .then((post) => {
       res.json(post);
