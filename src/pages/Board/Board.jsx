@@ -47,7 +47,6 @@ class Board extends Component {
         <div className="boardPage">
           <h1>Recipe Board</h1>
           <div className="boardPosts">
-            {/* {map of board posts} */}
             <Link
               className="btn btn-info"
               style={{ backgroundColor: "rgb(46,84,101)" }}
@@ -55,6 +54,14 @@ class Board extends Component {
             >
               Add Recipe
             </Link>
+            {this.props.posts.map((post) => (
+              <>
+                <p>
+                  <b>Name:</b> {post.name}
+                </p><br />
+                
+              </>
+            ))}
           </div>
         </div>
       </>

@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const postCtrl = require("../controllers/posts");
 
+router.get("/", postCtrl.index);
 /*---------- Public Routes ----------*/
 router.use(require('../config/auth'));
 /*---------- Protected Routes ----------*/
 router.post("/", checkAuth, postCtrl.create);
-router.get("/", checkAuth, postCtrl.index);
 router.delete("/:id", checkAuth, postCtrl.delete);
 // router.get("/:id", checkAuth, postCtrl.show);
 // router.post("/:id", checkAuth, postCtrl.reply);
