@@ -34,7 +34,6 @@ class AddBoardPost extends Component {
   render() {
     return (
       <>
-        <button onClick={this.handleShowForm}>Add Recipe</button>
         <div className="addPostPage">
           <h1>Add Recipe</h1>
 

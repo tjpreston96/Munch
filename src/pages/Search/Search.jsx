@@ -76,10 +76,7 @@ class Search extends Component {
                       alt="Card image cap"
                     />
                     <div className="card-body">
-                      <h5 className="card-title">{recipes.recipe.label}</h5>
-                      <p className="card-text">
-                        Rating: <br /> {this.props.user.cookbook}
-                      </p>
+                      <h4 className="card-title">{recipes.recipe.label}</h4>
                     </div>
                   </div>
                 </Link>
