@@ -25,7 +25,7 @@ export function deleteOne(id) {
     `${BASE_URL}${id}`,
     {
       method: "DELETE",
-      headers: { Authorization: "Bearer " + tokenService.getToken() },
+      headers: { 'Authorization': "Bearer " + tokenService.getToken() },
     },
     { mode: "cors" }.then((res) => res.json())
   );
