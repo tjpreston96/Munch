@@ -11,14 +11,18 @@ import Profile from "../Profile/Profile";
 import Board from "../Board/Board";
 import RecipeDetails from "../RecipeDetails/RecipeDetails";
 import AddBoardPost from "../AddBoardPost/AddBoardPost";
+import * as postAPI from "../../services/postService";
 
 class App extends Component {
   state = {
-    createPost: [],
-    singleRecipe: [],
     user: authService.getUser(),
+    posts: [],
   };
 
+  async componentDidMount() {
+    const allPosts = await postAPI.getAll();
+    this.setState({ posts: allPosts });
+  }
   handleLogout = () => {
     authService.logout();
     this.setState({ user: null });
@@ -27,6 +31,13 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() });
+  };
+
+  handleCreatePost = async (newPostData) => {
+    console.log(this.state.posts)
+    const newPost = await postAPI.createPost(newPostData);
+    this.setState({ posts: [...this.state.posts, newPost] });
+    this.props.history.push("/board");
   };
 
   render() {
@@ -80,8 +91,8 @@ class App extends Component {
             user ? (
               <Board
                 history={history}
-                createPost={this.state.createPost}
                 user={this.state.user}
+                posts={this.state.posts}
               />
             ) : (
               <Redirect to="/login" />
@@ -96,7 +107,7 @@ class App extends Component {
               <AddBoardPost
                 location={location}
                 history={history}
-                createPost={this.state.createPost}
+                handleCreatePost={this.handleCreatePost}
                 user={this.state.user}
               />
             ) : (
