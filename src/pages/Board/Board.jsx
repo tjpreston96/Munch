@@ -76,7 +76,7 @@ class Board extends Component {
                   >
                     Edit
                   </Link>
-                  <button className="spacing btn btn-danger">Delete</button>
+                  <button className="spacing btn" style={{ backgroundColor: "#FF7F50" }}>Delete</button>
                 </div>
               </>
             ))}
