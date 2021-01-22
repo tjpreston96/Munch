@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { saveRecipeToCookbook } from "../../services/userService";
 import "./RecipeDetails.css";
 
 // this.setState({recipeDetails: this.props.location.state.recipes.recipe})
@@ -68,10 +69,11 @@ class RecipeDetails extends Component {
           >
             Directions
           </a>
-          <button
+          <button onClick={()=> saveRecipeToCookbook(Recipes.recipe)
+            
+          }
             className="btn btn-dark"
             style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
-
           >
             Save Recipe
           </button>

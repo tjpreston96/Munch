@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect, Link } from "react-router-dom";
+import { Route, Redirect} from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -17,7 +17,7 @@ class App extends Component {
   state = {
     user: authService.getUser(),
     posts: [],
-    
+
   };
 
   async componentDidMount() {
