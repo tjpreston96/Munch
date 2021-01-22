@@ -16,18 +16,17 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema(
   {
     title: { type: String},
-    ingredients: { type: String},
+    ingredients: { type: [Schema.Types.Mixed]},
     recipe: { type: String},
     label: { type: String},
     image: { type: String},
     source: { type: String},
     url: { type: String},
     yield: { type: Number},
-    healthLabels: { type: String},
+    healthLabels: { type: [String]},
     calories: { type: Number},
     totalTime: { type: Number},
-    totalNutrients: { type: String},
-    users:{type:Schema.Types.ObjectId, ref: 'User'},
+    totalNutrients: { type: Schema.Types.Mixed},
 
   },
   {
@@ -35,4 +34,4 @@ const recipeSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Recipe", recipeSchema);
+module.exports = {recipeSchema,model:mongoose.model("Recipe", recipeSchema)}

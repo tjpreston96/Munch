@@ -7,6 +7,7 @@ module.exports = {
   update,
   addRecipeToCookbook,
   deleteRecipeFromCookbook,
+  saveCookbook
 };
 
 function index(req, res) {
@@ -56,4 +57,10 @@ function deleteRecipeFromCookbook(req, res) {
     .catch((err) => {
       console.log(err);
     });
+}
+
+function saveCookbook(req,res){
+  const cookBook = req.body
+  User.findByIdAndUpdate(req.user._id, {...(cookBook &&{$push:{cookbook:cookBook}})}, {new:true }
+    ).then((user)=>res.json(user))
 }

@@ -12,13 +12,16 @@ export function getAllUsers() {
 }
 
 export function updateUserProfile(formData) {
-  console.log(formData)
-  return fetch(`${BASE_URL}update`, {
-    method: "PUT",
-    headers: { Authorization: "Bearer " + tokenService.getToken()},
-    body: JSON.stringify(formData)
-  }, { mode: "cors" })
-  .then(res => res.json())
+  console.log(formData);
+  return fetch(
+    `${BASE_URL}update`,
+    {
+      method: "PUT",
+      headers: { Authorization: "Bearer " + tokenService.getToken() },
+      body: JSON.stringify(formData),
+    },
+    { mode: "cors" }
+  ).then((res) => res.json());
 }
 
 export function getUser() {
@@ -38,6 +41,17 @@ export function getRecipeToCookbook() {
       headers: { Authorization: "Bearer " + tokenService.getToken() },
     },
     { mode: "cors" }
+  ).then((res) => res.json());
+}
+export function saveRecipeToCookbook(cookbook) {
+  return fetch(
+    `${BASE_URL}cookbook`,
+    { body:JSON.stringify(cookbook),
+      headers: { Authorization: "Bearer " + tokenService.getToken() },
+      mode: "cors",
+      method: "POST"
+    },
+
   ).then((res) => res.json());
 }
 

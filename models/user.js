@@ -1,28 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
+const { recipeSchema } = require("./recipe");
 
 const SALT_ROUNDS = 6;
 
-const cookBookSchema = new Schema(
-  {
-    title: { type: String },
-    ingredients: { type: String },
-    recipe: { type: String },
-    label: { type: String },
-    image: { type: String },
-    source: { type: String },
-    url: { type: String },
-    yield: { type: Number },
-    healthLabels: { type: String },
-    calories: { type: Number },
-    totalTime: { type: Number },
-    totalNutrients: { type: String },
-  },
-  {
-    timestamps: true,
-  }
-);
 
 const userSchema = new Schema(
   {
@@ -30,7 +12,7 @@ const userSchema = new Schema(
     email: { type: String, required: true, lowercase: true, unique: true },
     password: String,
     image: String,
-    cookbook: [cookBookSchema],
+    cookbook: [recipeSchema],
   },
   {
     timestamps: true,
