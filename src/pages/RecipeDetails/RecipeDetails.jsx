@@ -66,11 +66,12 @@ class RecipeDetails extends Component {
             className="btn btn-dark"
             style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}
             href={Recipes.recipe.url}
+            target="_blank"
           >
             Directions
           </a>
           <button onClick={()=> saveRecipeToCookbook(Recipes.recipe)
-            
+
           }
             className="btn btn-dark"
             style={{ margin: ".2rem", backgroundColor: "rgb(46,84,101)" }}

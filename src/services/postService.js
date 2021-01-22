@@ -12,7 +12,7 @@ export function createPost(formData) {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        'Authorization': "Bearer " + tokenService.getToken(),
+        Authorization: "Bearer " + tokenService.getToken(),
       },
       body: JSON.stringify(formData),
     },
@@ -25,8 +25,11 @@ export function deleteOne(id) {
     `${BASE_URL}${id}`,
     {
       method: "DELETE",
-      headers: { 'Authorization': "Bearer " + tokenService.getToken() },
+      headers: {
+        "content-type": "application/json",
+        Authorization: "Bearer " + tokenService.getToken(),
+      },
     },
-    { mode: "cors" }.then((res) => res.json())
-  );
+    { mode: "cors" }
+  ).then((res) => res.json());
 }

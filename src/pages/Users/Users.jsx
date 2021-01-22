@@ -19,8 +19,17 @@ class Users extends Component {
           <div className="userCard">
             <h1>User List:</h1>
             <hr />
+
             {this.state.users.map((user) => (
-              <p>{user.name} </p>
+              <div className="username">
+                <p>{user.name} </p>
+                <Link
+                    className=" spacing btn btn-dark"
+                    style={{ backgroundColor: "rgb(46,84,101)" }}
+                  >
+                  Add Friend
+                  </Link>
+              </div>
             ))}
             <div>
               <Link
