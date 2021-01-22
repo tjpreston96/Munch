@@ -25,13 +25,3 @@ function recipeDetails(req, res) {
   Recipe.findById(req.params.id);
   console.log(req.params.id);
 }
-
-
-// function index(req, res) {
-//     Recipe.find({})
-//     .populate('addedby')
-//     .then((recipe) => {res.json(recipe)})
-//     .catch(err => {res.json(err)})
-// }
-
-// render the search function within service recipe-api.js

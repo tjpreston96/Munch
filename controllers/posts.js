@@ -4,11 +4,13 @@ module.exports = {
   create,
   index,
   delete: deleteOne,
-  // update
+  update,
+  // show,
+  // reply,
+  // deleteReply
 };
 
 function create(req, res) {
-  // req.body.addedBy = req.user._id;
   Post.create(req.body)
     .then((post) => {
       res.json(post);
@@ -39,30 +41,20 @@ function deleteOne(req, res) {
     });
 }
 
-// function deleteReply(req, res) {
-//   Recipe.findById(req.params.messageId)
-//     .then((message) => {
-//       res.json(message);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// }
-
-// function index(req, res) {
-//   Recipe.find({})
-//     .then((recipes) => {
-//       res.json(recipes);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// }
+function update(req, res) {
+  Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then((post) => {
+      res.json(post);
+    })
+    .catch((err) => {
+      res.json(err);
+    })
+}
 
 // function show(req, res) {
-//   Recipe.findById(req.params.id)
-//     .then((recipe) => {
-//       res.json(recipe);
+//   Post.findById(req.params.id)
+//     .then((Post) => {
+//       res.json(Post);
 //     })
 //     .catch((err) => {
 //       res.json(err);
@@ -70,10 +62,20 @@ function deleteOne(req, res) {
 // }
 
 // function reply(req, res) {
-//   Recipe.findById(req.params.id)
+//   Post.findById(req.params.id)
 //     .then((post) => {
 //       post.replies.push(req.body);
 //       post.save().then(() => res.json(post._id));
+//     })
+//     .catch((err) => {
+//       res.json(err);
+//     });
+// }
+
+// function deleteReply(req, res) {
+//   Post.findById(req.params.messageId)
+//     .then((message) => {
+//       res.json(message);
 //     })
 //     .catch((err) => {
 //       res.json(err);
