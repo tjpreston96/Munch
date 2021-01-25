@@ -17,21 +17,6 @@ class Board extends Component {
     user: this.props.user,
   };
 
-  handleSubmit = (e) => {
-    e.perventDefault();
-    this.props.handleCreate(this.state.formData);
-    // const data = this.setState;
-    // console.log("data", data);
-  };
-
-  handleInputChange = (e) => {
-    const formData = {
-      ...this.state.formData,
-      [e.target.name]: e.target.value,
-    };
-    this.setState({ formData: formData });
-  };
-
   handleCreate = async (formData) => {
     const recipes = await postAPI.createPost(formData);
     console.log(recipes);
