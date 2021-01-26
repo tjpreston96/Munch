@@ -49,7 +49,12 @@ class App extends Component {
       () => this.props.history.push('/board')
     );
   }
-
+  handleDeletePost= async id => {
+    await postAPI.deleteOne(id);
+    this.setState(state => ({
+      posts: state.posts.filter(p => p._id !== id)
+    }), () => this.props.history.push('/board'));
+  }
   render() {
     const { user } = this.state;
     return (
@@ -102,25 +107,10 @@ class App extends Component {
           render={({ history }) =>
             user ? (
               <Board
+                handleDeletePost = {this.handleDeletePost}
                 history={history}
                 user={this.state.user}
                 posts={this.state.posts}
-              />
-            ) : (
-              <Redirect to="/login" />
-            )
-          }
-        />
-        <Route
-          exact
-          path="/board/add"
-          render={({ history, location }) =>
-            user ? (
-              <AddBoardPost
-                location={location}
-                history={history}
-                handleCreatePost={this.handleCreatePost}
-                user={this.state.user}
               />
             ) : (
               <Redirect to="/login" />
@@ -136,6 +126,22 @@ class App extends Component {
                 location={location}
                 history={history}
                 handleEditPost={this.handleEditPost}
+                user={this.state.user}
+              />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/add"
+          render={({ history, location }) =>
+            user ? (
+              <AddBoardPost
+                location={location}
+                history={history}
+                handleCreatePost={this.handleCreatePost}
                 user={this.state.user}
               />
             ) : (

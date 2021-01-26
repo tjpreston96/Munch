@@ -35,7 +35,7 @@ class Board extends Component {
             <Link
               className="btn btn-info"
               style={{ backgroundColor: "rgb(46,84,101)" }}
-              to={{ pathname: "/board/add" }}
+              to={{ pathname: "/add" }}
             >
               Add Recipe
             </Link>
@@ -61,7 +61,7 @@ class Board extends Component {
                   >
                     Edit
                   </Link>
-                  <button
+                  <button onClick={()=> this.props.handleDeletePost(post._id)}
                     className="spacing btn"
                     style={{ backgroundColor: "#FF7F50" }}
                   >
