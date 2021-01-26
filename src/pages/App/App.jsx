@@ -12,7 +12,7 @@ import Board from "../Board/Board";
 import RecipeDetails from "../RecipeDetails/RecipeDetails";
 import AddBoardPost from "../AddBoardPost/AddBoardPost";
 import * as postAPI from "../../services/postService";
-
+import EditBoardPost from '../EditBoardPost/EditBoardPost'
 class App extends Component {
   state = {
     user: authService.getUser(),
@@ -39,6 +39,16 @@ class App extends Component {
     this.setState({ posts: [...this.state.posts, newPost] });
     this.props.history.push("/board");
   };
+  handleEditPost = async updatedPostData => {
+    const updatedPost = await postAPI.update(updatedPostData);
+    const newPostsArray = this.state.posts.map(p =>
+      p._id === updatedPost._id ? updatedPost : p
+    );
+    this.setState(
+      {posts: newPostsArray},
+      () => this.props.history.push('/board')
+    );
+  }
 
   render() {
     const { user } = this.state;
@@ -110,6 +120,22 @@ class App extends Component {
                 location={location}
                 history={history}
                 handleCreatePost={this.handleCreatePost}
+                user={this.state.user}
+              />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+           <Route
+          exact
+          path="/board/:id"
+          render={({ history, location }) =>
+            user ? (
+              <EditBoardPost
+                location={location}
+                history={history}
+                handleEditPost={this.handleEditPost}
                 user={this.state.user}
               />
             ) : (

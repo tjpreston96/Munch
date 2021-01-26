@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 class Board extends Component {
   state = {
-    invalidFrom: true,
+    invalidForm: true,
     posts: [],
     formData: {
       name: "",
@@ -55,7 +55,7 @@ class Board extends Component {
                     {post.directions}
                   </p>
 
-                  <Link
+                  <Link to ={`/board/${post._id}`}
                     className=" spacing btn btn-dark"
                     style={{ backgroundColor: "rgb(46,84,101)" }}
                   >

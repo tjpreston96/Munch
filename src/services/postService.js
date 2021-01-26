@@ -5,6 +5,9 @@ export function getAll() {
   return fetch(BASE_URL, { mode: "cors" }).then((res) => res.json());
 }
 
+export function getOne(id) {
+  return fetch(BASE_URL + id, { mode: "cors" }).then((res) => res.json());
+}
 export function createPost(formData) {
   return fetch(
     BASE_URL,
@@ -19,7 +22,18 @@ export function createPost(formData) {
     { mode: "cors" }
   ).then((res) => res.json());
 }
-
+export function update(formData){
+  return fetch(BASE_URL + formData._id,{
+    method: "PUT",
+    headers: {
+      "content-type": "application/json",
+      'Authorization': "Bearer " + tokenService.getToken(),
+    },
+    body: JSON.stringify(formData),
+  },
+  { mode: "cors" } )
+  .then((res) => res.json());
+}
 export function deleteOne(id) {
   return fetch(
     `${BASE_URL}${id}`,

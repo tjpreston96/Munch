@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import "./AddBoardPost.css";
+import "./EditBoardPost.css";
 import { Link } from "react-router-dom";
-
-class AddBoardPost extends Component {
+import * as postAPI from "../../services/postService";
+import { withRouter } from "react-router";
+class EditBoardPost extends Component {
   state = {
+    id: this.props.match.params.id,
     invalidForm: true,
     formData: {
       name: "",
@@ -12,18 +14,24 @@ class AddBoardPost extends Component {
     },
   };
 
+  async componentDidMount() {
+      const post = await postAPI.getOne(this.state.id);
+      console.log(post);
+      this.setState({formData:{name:post.name,ingredients:post.ingredients, directions:post.directions, _id: post._id}})
+    }
+
   formRef = React.createRef();
 
   handleSubmit = (e) => {
     e.preventDefault();
     // handleAddRecipe function will render in App.jsx
-    this.props.handleCreatePost(this.state.formData);
+    this.props.handleEditPost(this.state.formData);
   };
 
   handleChange = (e) => {
     const formData = {
       ...this.state.formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     };
     this.setState({
       formData,
@@ -34,8 +42,8 @@ class AddBoardPost extends Component {
   render() {
     return (
       <>
-        <div className="addPostPage">
-          <h1>Add Recipe</h1>
+        <div className="EditPostPage">
+          <h1>Edit Recipe</h1>
 
           <label htmlFor="recipe_name">Recipe Name:</label>
           <form className="" ref={this.formRef} onSubmit={this.handleSubmit}>
@@ -83,7 +91,7 @@ class AddBoardPost extends Component {
               className=""
               disabled={this.state.invalidForm}
             >
-              Add Recipe
+              Save Recipe
             </button>
           </form>
           <div>
@@ -101,4 +109,4 @@ class AddBoardPost extends Component {
   }
 }
 
-export default AddBoardPost;
+export default withRouter(EditBoardPost);
