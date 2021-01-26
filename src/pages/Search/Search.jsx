@@ -28,15 +28,8 @@ class Search extends Component {
   };
 
   handleSearch = async (formData) => {
-    console.log(`this function works!!!`);
     const recipes = await getResultsFromBackend(formData);
-
-    this.props.history.push("/search");
-    this.setState({ recipes, formData });
-    console.log(recipes);
-    console.log(`==========================`);
-    this.setState({ recipes: recipes, formData });
-    this.props.history.push("/search");
+    this.setState({ recipes, formData })
   };
 
   render() {
