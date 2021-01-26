@@ -42,7 +42,7 @@ class EditBoardPost extends Component {
   render() {
     return (
       <>
-        <div className="EditPostPage">
+        <div className="EditPage">
           <h1>Edit Recipe</h1>
 
           <label htmlFor="recipe_name">Recipe Name:</label>
