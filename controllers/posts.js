@@ -5,7 +5,7 @@ module.exports = {
   index,
   delete: deleteOne,
   update,
-  // show,
+  show,
   // reply,
   // deleteReply
 };
@@ -51,15 +51,15 @@ function update(req, res) {
     })
 }
 
-// function show(req, res) {
-//   Post.findById(req.params.id)
-//     .then((Post) => {
-//       res.json(Post);
-//     })
-//     .catch((err) => {
-//       res.json(err);
-//     });
-// }
+function show(req, res) {
+  Post.findById(req.params.id)
+    .then((post) => {
+      res.json(post);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+}
 
 // function reply(req, res) {
 //   Post.findById(req.params.id)
