@@ -5,7 +5,6 @@ const { recipeSchema } = require("./recipe");
 
 const SALT_ROUNDS = 6;
 
-
 const userSchema = new Schema(
   {
     name: String,

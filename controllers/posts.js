@@ -42,13 +42,13 @@ function deleteOne(req, res) {
 }
 
 function update(req, res) {
-  Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  Post.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((post) => {
       res.json(post);
     })
     .catch((err) => {
       res.json(err);
-    })
+    });
 }
 
 function show(req, res) {

@@ -37,7 +37,9 @@ class AddBoardPost extends Component {
         <div className="addPostPage">
           <h1>Add Recipe</h1>
 
-          <label htmlFor="recipe_name">Recipe Name:</label>
+          <label htmlFor="recipe_name">
+            <b>Recipe Name:</b>
+          </label>
           <form className="" ref={this.formRef} onSubmit={this.handleSubmit}>
             <input type="hidden" name="addedBy" value={this.props.user._id} />
             <div className="">
@@ -52,7 +54,9 @@ class AddBoardPost extends Component {
               />
             </div>
             <div className="">
-              <label htmlFor="ingredients">Ingredients:</label>
+              <label htmlFor="ingredients">
+                <b>Ingredients:</b>
+              </label>
               <br />
               <input
                 type="text"
@@ -65,7 +69,9 @@ class AddBoardPost extends Component {
               />
             </div>
             <div className="">
-              <label htmlFor="directions">Directions:</label>
+              <label htmlFor="directions">
+                <b>Directions:</b>
+              </label>
               <br />
               <input
                 type="text"
@@ -80,7 +86,8 @@ class AddBoardPost extends Component {
             <br />
             <button
               type="submit"
-              className=""
+              className="btn btn-dark"
+              style={{ backgroundColor: "rgb(46,84,101)" }}
               disabled={this.state.invalidForm}
             >
               Add Recipe
@@ -88,8 +95,8 @@ class AddBoardPost extends Component {
           </form>
           <div>
             <Link
-              className="btn btn-info"
-              style={{ backgroundColor: "rgb(46,84,101)" }}
+              className="btn spacing"
+              style={{ backgroundColor: "#FF7F50" }}
               to={{ pathname: "/board" }}
             >
               Cancel

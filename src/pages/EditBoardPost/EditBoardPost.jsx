@@ -15,10 +15,17 @@ class EditBoardPost extends Component {
   };
 
   async componentDidMount() {
-      const post = await postAPI.getOne(this.state.id);
-      console.log(post);
-      this.setState({formData:{name:post.name,ingredients:post.ingredients, directions:post.directions, _id: post._id}})
-    }
+    const post = await postAPI.getOne(this.state.id);
+    console.log(post);
+    this.setState({
+      formData: {
+        name: post.name,
+        ingredients: post.ingredients,
+        directions: post.directions,
+        _id: post._id,
+      },
+    });
+  }
 
   formRef = React.createRef();
 
@@ -31,7 +38,7 @@ class EditBoardPost extends Component {
   handleChange = (e) => {
     const formData = {
       ...this.state.formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     };
     this.setState({
       formData,
@@ -45,7 +52,9 @@ class EditBoardPost extends Component {
         <div className="EditPage">
           <h1>Edit Recipe</h1>
 
-          <label htmlFor="recipe_name">Recipe Name:</label>
+          <label htmlFor="recipe_name">
+            <b>Recipe Name:</b>
+          </label>
           <form className="" ref={this.formRef} onSubmit={this.handleSubmit}>
             <input type="hidden" name="addedBy" value={this.props.user._id} />
             <div className="">
@@ -60,7 +69,9 @@ class EditBoardPost extends Component {
               />
             </div>
             <div className="">
-              <label htmlFor="ingredients">Ingredients:</label>
+              <label htmlFor="ingredients">
+                <b>Ingredients:</b>
+              </label>
               <br />
               <input
                 type="text"
@@ -73,7 +84,9 @@ class EditBoardPost extends Component {
               />
             </div>
             <div className="">
-              <label htmlFor="directions">Directions:</label>
+              <label htmlFor="directions">
+                <b>Directions:</b>
+              </label>
               <br />
               <input
                 type="text"
@@ -88,16 +101,17 @@ class EditBoardPost extends Component {
             <br />
             <button
               type="submit"
-              className=""
+              className="btn btn-dark spacing"
               disabled={this.state.invalidForm}
+              style={{ backgroundColor: "rgb(46,84,101)" }}
             >
               Save Recipe
             </button>
           </form>
           <div>
             <Link
-              className="btn btn-info"
-              style={{ backgroundColor: "rgb(46,84,101)" }}
+              className="btn"
+              style={{ backgroundColor: "#FF7F50" }}
               to={{ pathname: "/board" }}
             >
               Cancel

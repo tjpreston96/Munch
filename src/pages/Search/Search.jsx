@@ -29,7 +29,7 @@ class Search extends Component {
 
   handleSearch = async (formData) => {
     const recipes = await getResultsFromBackend(formData);
-    this.setState({ recipes, formData })
+    this.setState({ recipes, formData });
   };
 
   render() {
@@ -47,7 +47,7 @@ class Search extends Component {
                 value={this.state.formData.query}
                 onChange={this.handleChange}
               />
-              <button type="submit">
+              <button type="button submit">
                 <i className="fa fa-search search-btn"></i>
               </button>
             </form>
