@@ -1,38 +1,84 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ? (
-        <nav>
-          <div className="nav-wrapper">
-            <ul id="nav-mobile" className="right">
-              <li className="nav-link">Welcome, {user.name}</li>
-              <li>
-                <Link to="/users" className="nav-link">
-                  USERS
+        <nav
+          className="navbar navbar-expand-lg navbar-dark bg-dark"
+          style={{ color: "white" }}
+        >
+          <Link to="/" className="navbar-brand">
+            Munch
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <Link to="/search" className="nav-link">
+                  Search
                 </Link>
               </li>
-              <li>
-                <Link to={{ pathname: "/search" }}>SEARCH</Link>
+
+              <li className="nav-item">
+                <Link to="/board" className="nav-link">
+                  Recipe Board
+                </Link>
               </li>
-              <li>
-                <Link to={{ pathname: "/profile" }}>PROFILE</Link>
+
+              <li className="nav-item">
+                <Link to="/users" className="nav-link">
+                  Users
+                </Link>
               </li>
-              <li>
-                <Link to={{ pathname: "/board" }}> RECIPE BOARD</Link>
+
+              <li className="nav-item">
+                <Link to="/profile" className="nav-link">
+                  Profile
+                </Link>
               </li>
-              <Link to="" className="nav-link" onClick={handleLogout}>
-                LOG OUT
-              </Link>
+              <li className="nav-item ">
+                <Link to="/" className="nav-link logout" onClick={handleLogout}>
+                  Log Out
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
       ) : (
-        <nav>
-          <div className="nav-wrapper">
-            <ul id="nav-mobile" className="right">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <Link to="/" className="navbar-brand">
+            Munch
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse "
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav mr-auto">
               <li>
                 <Link to="/login" className="nav-link">
                   Log In
@@ -50,5 +96,4 @@ const NavBar = ({ user, handleLogout }) => {
     </>
   );
 };
-
 export default NavBar;

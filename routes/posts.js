@@ -1,13 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const recipesCtrl = require("../controllers/recipes");
+const postCtrl = require("../controllers/posts");
 
 /*---------- Public Routes ----------*/
+router.get("/:id", postCtrl.show);
+router.get("/", postCtrl.index);
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.post("/search", checkAuth, recipesCtrl.search);
-router.post("/show/:id", checkAuth, recipesCtrl.recipeDetails);
+router.post("/", checkAuth, postCtrl.create);
+router.delete("/:id", checkAuth, postCtrl.delete);
+router.put("/:id", checkAuth, postCtrl.update);
+// router.post("/:id", checkAuth, postCtrl.reply);
+// router.delete("/:messageId/:replyId", checkAuth, postCtrl.deleteReply);
 
 // ======== Is User LoggedIn ======== //
 function checkAuth(req, res, next) {

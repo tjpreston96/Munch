@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Profile.css";
 
-class Profile extends Component {
-  state = {};
-  render() {
-    return (
-      <>
-        <div className="profileCard">
-          <div className="profile">Profile Div</div>
-          <div className="cookbook">Cookbook Div</div>
+const Profile = ({ user }) => {
+  return (
+    <>
+      <div className="profileCard">
+        <h3>{user.name}'s Profile</h3>
+        <div className="userInfo">
+          <b>Name:</b> <br/>{user.name} <br />
+          <b>Email:</b><br/> {user.email} <br />
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
 
 export default Profile;

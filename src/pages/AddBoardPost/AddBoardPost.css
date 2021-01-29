@@ -1,4 +1,4 @@
-.profileCard {
+.addPostPage {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -9,10 +9,4 @@
   width: 80%;
   padding: 10px;
   box-shadow: 0 0 20px 5px rgb(46, 49, 50);
-  align-items: center;
-}
-
-.userInfo {
-  /* background-color: white; */
-  width: 60%;
 }

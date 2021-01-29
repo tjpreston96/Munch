@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import "./Search.css";
 import { getResultsFromBackend } from "../../services/recipe-api";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
 class Search extends Component {
   state = {
     recipes: [],
+    singleRecipe: [],
     formData: {
       query: "",
     },
@@ -28,15 +28,8 @@ class Search extends Component {
   };
 
   handleSearch = async (formData) => {
-    console.log(`this function works!!!`);
     const recipes = await getResultsFromBackend(formData);
-
-    this.props.history.push("/search");
     this.setState({ recipes, formData });
-    console.log(recipes);
-    console.log(`==========================`);
-    this.setState({ recipes: recipes, formData });
-    this.props.history.push("/search");
   };
 
   render() {
@@ -50,28 +43,33 @@ class Search extends Component {
                 className="searchBar"
                 type="text"
                 name="query"
-                placeholder="What would you like to eat?"
+                placeholder="Search..."
                 value={this.state.formData.query}
                 onChange={this.handleChange}
               />
-              <button type="submit">Search</button>
+              <button type="button submit">
+                <i className="fa fa-search search-btn"></i>
+              </button>
             </form>
+            <hr />
             <div className="results">
-              {this.state.recipes.map((recipes) => (
-                <Link className="recipe-details"
-                to={{
-                  pathname:'/recipes-details'
-                  }}>
-                  <div className="resultsCard">
-                    <div className="imgDiv">
-                      <img
-                        className="resultImg"
-                        src={recipes.recipe.image}
-                        alt="food-img"
-                      />
-                    </div>
-                    <div className='resultInfo'>
-                      <h2>{recipes.recipe.label}</h2>
+              {this.state.recipes.map((recipes, idx) => (
+                <Link
+                  className="recipesDetails"
+                  key={idx}
+                  to={{
+                    pathname: `/recipesDetails`,
+                    state: { recipes },
+                  }}
+                >
+                  <div className="card">
+                    <img
+                      className="card-img-top"
+                      src={`${recipes.recipe.image}`}
+                      alt="Card image cap"
+                    />
+                    <div className="card-body">
+                      <h4 className="card-title">{recipes.recipe.label}</h4>
                     </div>
                   </div>
                 </Link>

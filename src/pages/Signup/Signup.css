@@ -1,7 +1,31 @@
-.Signup {
+.signupPage {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+}
+
+.signupCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: cornsilk;
+  text-align: center;
+  border-radius: 1.5rem;
+  width: 80%;
+  padding: 10px;
+  box-shadow: 0 0 20px 5px rgb(46, 49, 50);
+  /* text-align: center;
+  justify-content: center;
+  align-items: center; */
+}
+
+.password {
+  margin-bottom: 10px;
+}
+
+.spacing {
+  margin: 0.5rem;
 }
