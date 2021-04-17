@@ -1,10 +1,12 @@
 # Munch
 
 ## Getting Started:
+### Guest Information:
+<p>Email: guestuser@gmail.com <br> Password: MunchMunchMunch </p>
 
 <a href="https://munch-bunch.herokuapp.com/">Munch</a> - This will prompt you to the deployed web app where you can start finding your favorite recipes!
 
-<a href="https://trello.com/b/3Z1qAtou/munch-app">Trello</a> - This link will direct you to my planning in moving foward with my web app.
+<a href="https://trello.com/b/3Z1qAtou/munch-app">Trello</a> - This link will direct you to our planning in moving foward with my web app.
 
 ## Wireframes Images:
 
